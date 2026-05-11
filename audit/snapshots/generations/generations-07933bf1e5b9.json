@@ -1,0 +1,66 @@
+{
+  "id": "generations-07933bf1e5b9",
+  "timestamp_utc": "2026-05-09T18:20:03Z",
+  "category": "generations",
+  "request": {
+    "model": "openai/gpt-4o",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a blog post on the topic below. Length: 400-600 words. Include an\nintroduction, 2-3 substantive paragraphs, and a brief conclusion. Write in\nyour own natural style; do not include any meta-commentary about the topic\nor about being an AI.\n\nTopic: What I learned from my first marathon\n"
+      }
+    ]
+  },
+  "response": {
+    "status_code": 200,
+    "body": {
+      "id": "gen-1778350797-0FRboFTCNOapFjnAKqEl",
+      "object": "chat.completion",
+      "created": 1778350797,
+      "model": "openai/gpt-4o",
+      "provider": "OpenAI",
+      "system_fingerprint": "fp_2dd602437d",
+      "choices": [
+        {
+          "index": 0,
+          "logprobs": null,
+          "finish_reason": "stop",
+          "native_finish_reason": "stop",
+          "message": {
+            "role": "assistant",
+            "content": "**What I Learned from My First Marathon**\n\nParticipating in my first marathon was a journey of transformation, endurance, and self-discovery. As someone who always viewed running as a chore rather than a passion, the prospect of a 26.2-mile run seemed daunting—almost insurmountable. Yet, the experience was not only about crossing the finish line; it was about the lessons learned along the way. These lessons extended beyond the physical realm, touching on areas of mental strength and personal growth that I had never anticipated.\n\nThe first lesson was the undeniable power of preparation. Marathon training demands a rigorous schedule that stretches over months, testing not only one's physical capabilities but also mental tenacity. During this period, I realized that discipline was crucial. Early morning runs, cross-training sessions, and the ever-looming \"long run Sundays\" taught me that consistency was key. The structured schedule forced me to prioritize my time, reshaping my day-to-day life. I became more focused and organized, skills that started to spill over into other aspects of my daily routine. Preparation wasn't just about physical readiness; it was about cultivating a mindset that embraced challenges, acknowledging the small wins along the way and understanding that perseverance is built step by step.\n\nAnother profound lesson was learning to listen to my body. In the initial stages of training, I pushed myself hard under the assumption that more was better. However, this approach quickly backfired, resulting in nagging injuries and fatigue. It was a humbling experience that underscored the importance of recovery and rest. I learned to differentiate between discomfort that could be pushed through and signals from my body that required attention. This newfound awareness developed my intuition and respect for the delicate balance necessary to sustain such an endeavor. Listening to my body improved not only my performance but also my overall health and well-being, emphasizing the importance of rest, hydration, and nutrition in achieving goals.\n\nLastly, the marathon taught me about the strength of community and shared experience. On race day, the energy was palpable, with thousands of runners converging for a single purpose. The camaraderie was inspiring; complete strangers became allies, offering encouragement even when words fell short. The support from the spectators, cheering and holding signs, provided an unexpected boost during the race. This collective spirit reinforced my belief that even though running is often seen as an individual sport, the connections formed along the way add profound depth to the experience. The shared journey instilled a deep sense of gratitude and highlighted the importance of community in overcoming challenges.\n\nIn conclusion, my first marathon was a transformative experience that extended far beyond physical achievement. The lessons in preparation, self-awareness, and community support became instrumental in my personal growth. It was a reminder that challenges, no matter how formidable, can lead to unexpected and rewarding paths of self-discovery. Looking back, what began as a personal test of endurance evolved into a testament of capability and connection, providing insights that I will carry with me long after the race. Running that marathon wasn't just about reaching the finish line; it was about the miles of wisdom gained along the way.",
+            "refusal": null,
+            "reasoning": null
+          }
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 624,
+        "total_tokens": 701,
+        "cost": 0.0064325,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0064325,
+          "upstream_inference_prompt_cost": 0.0001925,
+          "upstream_inference_completions_cost": 0.00624
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "parsed": {
+    "body": "**What I Learned from My First Marathon**\n\nParticipating in my first marathon was a journey of transformation, endurance, and self-discovery. As someone who always viewed running as a chore rather than a passion, the prospect of a 26.2-mile run seemed daunting—almost insurmountable. Yet, the experience was not only about crossing the finish line; it was about the lessons learned along the way. These lessons extended beyond the physical realm, touching on areas of mental strength and personal growth that I had never anticipated.\n\nThe first lesson was the undeniable power of preparation. Marathon training demands a rigorous schedule that stretches over months, testing not only one's physical capabilities but also mental tenacity. During this period, I realized that discipline was crucial. Early morning runs, cross-training sessions, and the ever-looming \"long run Sundays\" taught me that consistency was key. The structured schedule forced me to prioritize my time, reshaping my day-to-day life. I became more focused and organized, skills that started to spill over into other aspects of my daily routine. Preparation wasn't just about physical readiness; it was about cultivating a mindset that embraced challenges, acknowledging the small wins along the way and understanding that perseverance is built step by step.\n\nAnother profound lesson was learning to listen to my body. In the initial stages of training, I pushed myself hard under the assumption that more was better. However, this approach quickly backfired, resulting in nagging injuries and fatigue. It was a humbling experience that underscored the importance of recovery and rest. I learned to differentiate between discomfort that could be pushed through and signals from my body that required attention. This newfound awareness developed my intuition and respect for the delicate balance necessary to sustain such an endeavor. Listening to my body improved not only my performance but also my overall health and well-being, emphasizing the importance of rest, hydration, and nutrition in achieving goals.\n\nLastly, the marathon taught me about the strength of community and shared experience. On race day, the energy was palpable, with thousands of runners converging for a single purpose. The camaraderie was inspiring; complete strangers became allies, offering encouragement even when words fell short. The support from the spectators, cheering and holding signs, provided an unexpected boost during the race. This collective spirit reinforced my belief that even though running is often seen as an individual sport, the connections formed along the way add profound depth to the experience. The shared journey instilled a deep sense of gratitude and highlighted the importance of community in overcoming challenges.\n\nIn conclusion, my first marathon was a transformative experience that extended far beyond physical achievement. The lessons in preparation, self-awareness, and community support became instrumental in my personal growth. It was a reminder that challenges, no matter how formidable, can lead to unexpected and rewarding paths of self-discovery. Looking back, what began as a personal test of endurance evolved into a testament of capability and connection, providing insights that I will carry with me long after the race. Running that marathon wasn't just about reaching the finish line; it was about the miles of wisdom gained along the way."
+  }
+}

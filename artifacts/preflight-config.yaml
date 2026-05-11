@@ -1,0 +1,17 @@
+# preflight-config.yaml — single model/title for pre-flight test only
+experiment:
+  factorial:
+    generators:
+      - model: openai/gpt-4o
+        label: ChatGPT
+    judges:
+      - openai/gpt-4o
+    titles:
+      count: 1
+      list:
+        - "What I learned from my first marathon"
+    label_conditions:
+      - none
+      - true_label
+      - false_label_1
+      - false_label_2

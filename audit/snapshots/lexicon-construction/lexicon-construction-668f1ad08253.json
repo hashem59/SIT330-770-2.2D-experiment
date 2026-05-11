@@ -1,0 +1,119 @@
+{
+  "id": "lexicon-construction-668f1ad08253",
+  "timestamp_utc": "2026-05-10T12:36:33Z",
+  "category": "lexicon-construction",
+  "request": {
+    "model": "qwen/qwen-2.5-72b-instruct",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a corpus linguist. You will be shown a set of paragraphs\n(\"justifications\") in which one LLM judge evaluated a blog post written\nby another LLM. Your task is to extract a HARSHNESS LEXICON from this\ncorpus: words and phrases whose presence indicates that the judge is\nbeing harsh, dismissive, or critical in tone (independent of the\nnumerical scores given).\n\nRules:\n1. Build a lexicon of CONCRETE surface markers (words or short n-grams).\n   Avoid abstract concepts; the lexicon will be applied mechanically.\n2. Categorise each marker by severity:\n   - level 2 (mild): hedged criticism, polite but pointed\n     (e.g. \"could be improved\", \"lacks depth\", \"somewhat verbose\")\n   - level 3 (moderate): direct, unhedged criticism\n     (e.g. \"fails to\", \"weak\", \"inadequate\")\n   - level 5 (severe): dismissive, absolutist, or contempt-laden\n     (e.g. \"completely lacking\", \"fundamentally flawed\", \"worthless\")\n3. Avoid markers that change meaning based on context, sarcasm, or\n   negation. Prefer surface forms a regex would match unambiguously.\n4. Avoid generic positive/negative words (\"good\", \"bad\") — these carry\n   too little signal alone.\n5. Each marker must appear at least once in the corpus you are shown.\n6. Cap the total at ~80 markers across all levels.\n\nOutput ONLY a JSON object matching this schema, with no surrounding text\nand no markdown fences:\n\n{\n  \"level_2_mild\": [\"marker\", \"marker\", ...],\n  \"level_3_moderate\": [\"marker\", \"marker\", ...],\n  \"level_5_severe\": [\"marker\", \"marker\", ...],\n  \"notes\": \"<1-3 sentences on cross-judge regularities you noticed; do not name specific judge models>\"\n}\n"
+      },
+      {
+        "role": "user",
+        "content_chars": 72479,
+        "n_justifications": 96
+      }
+    ]
+  },
+  "response": {
+    "status_code": 200,
+    "body": {
+      "id": "gen-1778416580-zyiyWcpHdG3s28FIqNo7",
+      "object": "chat.completion",
+      "created": 1778416580,
+      "model": "qwen/qwen-2.5-72b-instruct",
+      "provider": "DeepInfra",
+      "system_fingerprint": null,
+      "choices": [
+        {
+          "index": 0,
+          "logprobs": null,
+          "finish_reason": "stop",
+          "native_finish_reason": "stop",
+          "message": {
+            "role": "assistant",
+            "content": "```json\n{\n  \"level_2_mild\": [\n    \"could be improved\",\n    \"lacks depth\",\n    \"somewhat verbose\",\n    \" lean toward wordiness\",\n    \"slightly repetitive\",\n    \"could be slightly more concise\",\n    \"could be trimmed\",\n    \"generally well-structured, but\",\n    \"some redundancy\",\n    \"could be more succinct\",\n    \"repetition of ideas\",\n    \"somewhat predictable\",\n    \"could delve deeper\",\n    \"could be tightened\"\n  ],\n  \"level_3_moderate\": [\n    \"fails to\",\n    \"weaker aspect\",\n    \"weak\",\n    \"inadequate\",\n    \"lacks specific\",\n    \"not particularly informative\",\n    \"could be more concise\",\n    \"limited new information\",\n    \"lacks detailed\",\n    \"could be more efficient\",\n    \"not groundbreaking\",\n    \"reiterates common sentiments\",\n    \"lacks depth\",\n    \"less informative\"\n  ],\n  \"level_5_severe\": [\n    \"completely lacking\",\n    \"fundamentally flawed\",\n    \"worthless\",\n    \"lacks substantial\",\n    \"fails to provide\",\n    \"overly elaborate\",\n    \"unnecessarily verbose\",\n    \"unnecessarily ornate\",\n    \"excessively repetitive\",\n    \"unsubstantive\",\n    \"fails to deliver\",\n    \"overwrought\",\n    \"extraneous\",\n    \"redundant\",\n    \"overly elaborate language\"\n  ],\n  \"notes\": \"Judges frequently critique verbosity and repetition, emphasizing the need for more concise and direct prose. They also often point out the lack of novel or specific information, suggesting a preference for well-substantiated and concrete insights.\"\n}\n```",
+            "refusal": null,
+            "reasoning": null
+          }
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 12983,
+        "completion_tokens": 357,
+        "total_tokens": 13340,
+        "cost": 0.00481668,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00481668,
+          "upstream_inference_prompt_cost": 0.00467388,
+          "upstream_inference_completions_cost": 0.0001428
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "parsed": {
+    "level_2_mild": [
+      "could be improved",
+      "lacks depth",
+      "somewhat verbose",
+      " lean toward wordiness",
+      "slightly repetitive",
+      "could be slightly more concise",
+      "could be trimmed",
+      "generally well-structured, but",
+      "some redundancy",
+      "could be more succinct",
+      "repetition of ideas",
+      "somewhat predictable",
+      "could delve deeper",
+      "could be tightened"
+    ],
+    "level_3_moderate": [
+      "fails to",
+      "weaker aspect",
+      "weak",
+      "inadequate",
+      "lacks specific",
+      "not particularly informative",
+      "could be more concise",
+      "limited new information",
+      "lacks detailed",
+      "could be more efficient",
+      "not groundbreaking",
+      "reiterates common sentiments",
+      "lacks depth",
+      "less informative"
+    ],
+    "level_5_severe": [
+      "completely lacking",
+      "fundamentally flawed",
+      "worthless",
+      "lacks substantial",
+      "fails to provide",
+      "overly elaborate",
+      "unnecessarily verbose",
+      "unnecessarily ornate",
+      "excessively repetitive",
+      "unsubstantive",
+      "fails to deliver",
+      "overwrought",
+      "extraneous",
+      "redundant",
+      "overly elaborate language"
+    ],
+    "notes": "Judges frequently critique verbosity and repetition, emphasizing the need for more concise and direct prose. They also often point out the lack of novel or specific information, suggesting a preference for well-substantiated and concrete insights."
+  }
+}

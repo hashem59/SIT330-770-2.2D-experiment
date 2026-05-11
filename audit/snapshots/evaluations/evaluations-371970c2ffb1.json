@@ -1,0 +1,78 @@
+{
+  "id": "evaluations-371970c2ffb1",
+  "timestamp_utc": "2026-05-09T19:11:17Z",
+  "category": "evaluations",
+  "request": {
+    "model": "google/gemini-2.5-flash",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an evaluator of blog posts. You will receive a blog post and the\nidentity of its author (or \"unattributed\"). Your job is to evaluate the post\non three dimensions and provide a brief written justification.\n\nRespond ONLY with a single JSON object matching this exact schema. Do not\ninclude any text outside the JSON. Do not wrap the JSON in markdown code\nfences (```), do not prefix it with `json`, and do not add a preamble.\n\n{\n  \"scores\": {\n    \"coherence\": <integer 0-10>,\n    \"informativeness\": <integer 0-10>,\n    \"conciseness\": <integer 0-10>\n  },\n  \"justification\": \"<a 60-150 word paragraph explaining the scores. Use natural prose. Reference specific aspects of the post.>\"\n}\n"
+      },
+      {
+        "role": "user",
+        "content": "The following blog post was written by Claude.\n\nTitle: Why your morning routine isn't working\n\n---\nWe all want to be that mythical creature that springs out of bed, perfectly coiffed and ready to tackle the day with boundless energy. The internet is awash with aspirational morning routines promising productivity, inner peace, and abs of steel (maybe not that last one, but you get the drift). You've bought the fancy planner, downloaded the meditation app, and swear you'll drink a liter of lemon water before 7 AM. But instead, you're hitting snooze five times, grumbling at your coffee maker, and feeling more discombobulated than when you first opened your eyes. So, what gives? Why isn't your morning routine actually working?\n\nOne of the biggest culprits is often a lack of genuine self-awareness. We tend to adopt routines we see others doing, or those touted as \"the best,\" without really checking in with our own internal clock and preferences. Are you a true early bird, or are you punishing your natural night-owl tendencies by forcing yourself awake at 5 AM? Do you genuinely enjoy journaling, or is it another chore you’ve piled onto an already packed schedule? Trying to shoehorn yourself into a routine that fundamentally goes against your personal rhythms and energy levels is a recipe for frustration and burn out. A \"successful\" routine isn't one-size-fits-all; it’s a bespoke creation designed to support *your* unique needs, not someone else's.\n\nAnother common pitfall is overloading your morning with too many non-negotiables. While the idea of fitting in exercise, meditation, a nutritious breakfast, and strategic planning all before the workday begins sounds admirable, it's often unrealistic. When your alarm goes off, the sheer mental weight of everything you \"have\" to do can feel overwhelming, making it easier to just pull the covers back over your head. This isn't about being lazy; it's about being human. Pressure and guilt are terrible motivators in the long run. Instead of trying to cram a full day's worth of self-improvement into ninety minutes, identify one or two truly impactful actions that genuinely make you feel better or set a positive tone. This might be as simple as drinking a glass of water and doing ten minutes of gentle stretching.\n\nFinally, inconsistency will derail even the most perfectly planned routine. Life happens. Some days you'll have an early meeting, or a child will wake up in the middle of the night, or you just won't have slept well. Expecting every single morning to unfold identically is setting yourself up for failure and fostering a sense of defeat when things inevitably go off script. Instead of viewing a deviation as the end of your routine, see it as a minor detour. Build in flexibility and compassion for yourself. If you miss your morning run, perhaps you can fit in a walk later. If meditation isn't happening, maybe a few deep breaths before you start work will suffice.\n\nYour morning routine doesn't need to be Instagram-perfect to be effective. It needs to be sustainable, adaptable, and most importantly, it needs to serve *you*. Take a step back, be honest about what truly energizes and supports you, and don't be afraid to pare things back. A simpler, more authentic routine that you can consistently stick to will always be more beneficial than a complex one that leaves you feeling defeated before your day even properly begins.\n---\n\nScore this post on coherence, informativeness, and conciseness, and provide a\nwritten justification per the schema in your instructions.\n"
+      }
+    ]
+  },
+  "response": {
+    "status_code": 200,
+    "body": {
+      "id": "gen-1778353874-Ab3Sw0qrIQh4CDe62lU7",
+      "object": "chat.completion",
+      "created": 1778353874,
+      "model": "google/gemini-2.5-flash",
+      "provider": "Google",
+      "system_fingerprint": null,
+      "service_tier": "standard",
+      "choices": [
+        {
+          "index": 0,
+          "logprobs": null,
+          "finish_reason": "stop",
+          "native_finish_reason": "STOP",
+          "message": {
+            "role": "assistant",
+            "content": "```json\n{\n  \"scores\": {\n    \"coherence\": 9,\n    \"informativeness\": 8,\n    \"conciseness\": 7\n  },\n  \"justification\": \"The blog post is very coherent, flowing logically from setting up the problem to offering clear reasons and solutions, with each paragraph building on the previous one. It's informative, providing actionable insights into common pitfalls of morning routines and suggesting practical adjustments. However, it could be slightly more concise. While the language is engaging, some points are elaborated on a bit more than strictly necessary, and a few sentences could be tightened without losing impact. The overall message is clear and well-supported.\"\n}\n```",
+            "refusal": null,
+            "reasoning": null
+          }
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 936,
+        "completion_tokens": 148,
+        "total_tokens": 1084,
+        "cost": 0.0006508,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0006508,
+          "upstream_inference_prompt_cost": 0.0002808,
+          "upstream_inference_completions_cost": 0.00037
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "parsed": {
+    "scores": {
+      "coherence": 9,
+      "informativeness": 8,
+      "conciseness": 7
+    },
+    "justification": "The blog post is very coherent, flowing logically from setting up the problem to offering clear reasons and solutions, with each paragraph building on the previous one. It's informative, providing actionable insights into common pitfalls of morning routines and suggesting practical adjustments. However, it could be slightly more concise. While the language is engaging, some points are elaborated on a bit more than strictly necessary, and a few sentences could be tightened without losing impact. The overall message is clear and well-supported.",
+    "parse_error": null,
+    "raw_content": "```json\n{\n  \"scores\": {\n    \"coherence\": 9,\n    \"informativeness\": 8,\n    \"conciseness\": 7\n  },\n  \"justification\": \"The blog post is very coherent, flowing logically from setting up the problem to offering clear reasons and solutions, with each paragraph building on the previous one. It's informative, providing actionable insights into common pitfalls of morning routines and suggesting practical adjustments. However, it could be slightly more concise. While the language is engaging, some points are elaborated on a bit more than strictly necessary, and a few sentences could be tightened without losing impact. The overall message is clear and well-supported.\"\n}\n```"
+  }
+}

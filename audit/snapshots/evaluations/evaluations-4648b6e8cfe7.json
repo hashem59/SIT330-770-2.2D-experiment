@@ -1,0 +1,77 @@
+{
+  "id": "evaluations-4648b6e8cfe7",
+  "timestamp_utc": "2026-05-09T19:09:29Z",
+  "category": "evaluations",
+  "request": {
+    "model": "openai/gpt-4o",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an evaluator of blog posts. You will receive a blog post and the\nidentity of its author (or \"unattributed\"). Your job is to evaluate the post\non three dimensions and provide a brief written justification.\n\nRespond ONLY with a single JSON object matching this exact schema. Do not\ninclude any text outside the JSON. Do not wrap the JSON in markdown code\nfences (```), do not prefix it with `json`, and do not add a preamble.\n\n{\n  \"scores\": {\n    \"coherence\": <integer 0-10>,\n    \"informativeness\": <integer 0-10>,\n    \"conciseness\": <integer 0-10>\n  },\n  \"justification\": \"<a 60-150 word paragraph explaining the scores. Use natural prose. Reference specific aspects of the post.>\"\n}\n"
+      },
+      {
+        "role": "user",
+        "content": "The following blog post was written by Claude.\n\nTitle: Why your morning routine isn't working\n\n---\n# Why Your Morning Routine Isn't Working\n\nYou've read the articles, watched the YouTube videos, and maybe even bought the planner with the perfect morning routine template. Yet here you are, three weeks later, hitting snooze for the fourth time and wondering why you can't seem to stick to that carefully crafted 5 AM wake-up call. The truth is, most morning routines fail not because we lack willpower, but because we're approaching them all wrong.\n\nThe biggest mistake people make is trying to completely overhaul their mornings overnight. They go from barely managing to grab coffee on their way out the door to attempting a two-hour routine that includes meditation, journaling, exercise, a healthy breakfast, and reading. This dramatic shift sets you up for failure because it ignores how habits actually form. Your brain resists sudden, massive changes, and your current sleep schedule can't magically adjust to support a drastically earlier wake-up time. Instead of sustainable progress, you create an all-or-nothing scenario where missing one element makes you feel like you've failed entirely.\n\nAnother major issue is copying someone else's routine without considering your own chronotype, lifestyle, or actual goals. That entrepreneur's 4 AM workout might work for them, but if you're naturally a night owl with young kids, you're fighting against your biology and circumstances. The most effective morning routine is one that aligns with your energy patterns and serves your specific needs. Maybe your ideal morning isn't about crushing a workout before dawn – perhaps it's about having ten minutes of quiet with your coffee before the household wakes up. There's no universal \"perfect\" morning routine, despite what social media might suggest.\n\nThe final reason morning routines fail is that they often lack flexibility and forgiveness. Life happens. You'll have nights where you stay up late dealing with a sick child or finishing an urgent project. You'll have mornings where you oversleep or feel under the weather. A rigid routine that can't adapt to these realities becomes a source of guilt rather than a tool for improvement. The most successful morning routines have built-in flexibility – maybe you have a \"minimum viable routine\" for tough mornings that's just five minutes long, or you focus on consistency over perfection, celebrating four good mornings out of seven rather than beating yourself up about the other three.\n\nBuilding a sustainable morning routine isn't about discipline or finding the perfect combination of activities. It's about starting small, honoring your natural rhythms, and creating something that enhances your life rather than adding pressure to it. Begin with just one small change that feels manageable – maybe it's putting your phone in another room overnight or preparing your coffee the night before. Once that feels automatic, add another small element. Focus on progress, not perfection, and remember that the best morning routine is the one you can actually stick with long-term. Your future self will thank you for choosing sustainability over Instagram-worthy ambition.\n---\n\nScore this post on coherence, informativeness, and conciseness, and provide a\nwritten justification per the schema in your instructions.\n"
+      }
+    ]
+  },
+  "response": {
+    "status_code": 200,
+    "body": {
+      "id": "gen-1778353767-wc9ppodLvUTTMhUYCXGV",
+      "object": "chat.completion",
+      "created": 1778353767,
+      "model": "openai/gpt-4o",
+      "provider": "OpenAI",
+      "system_fingerprint": "fp_c0f910b5dd",
+      "choices": [
+        {
+          "index": 0,
+          "logprobs": null,
+          "finish_reason": "stop",
+          "native_finish_reason": "stop",
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"scores\": {\n    \"coherence\": 9,\n    \"informativeness\": 8,\n    \"conciseness\": 9\n  },\n  \"justification\": \"The blog post is highly coherent, presenting a clear argument about the challenges and misconceptions surrounding morning routines. The author introduces the problem, explains common mistakes, and suggests practical solutions, maintaining a logical flow. The informativeness score is strong, as the post addresses multiple aspects of why morning routines often fail, such as drastic changes, misaligned routines, and lack of flexibility. However, it could include more detailed strategies or examples for readers to improve their routines, slightly limiting its informativeness. The post is concise, effectively communicating its main points without unnecessary elaboration. Each paragraph contributes directly to the overarching thesis, and the suggestion to focus on sustainability over perfection is a succinct, actionable takeaway for readers. Overall, the post is well-structured and delivers its message efficiently.\" \n}",
+            "refusal": null,
+            "reasoning": null
+          }
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 794,
+        "completion_tokens": 194,
+        "total_tokens": 988,
+        "cost": 0.003925,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.003925,
+          "upstream_inference_prompt_cost": 0.001985,
+          "upstream_inference_completions_cost": 0.00194
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "parsed": {
+    "scores": {
+      "coherence": 9,
+      "informativeness": 8,
+      "conciseness": 9
+    },
+    "justification": "The blog post is highly coherent, presenting a clear argument about the challenges and misconceptions surrounding morning routines. The author introduces the problem, explains common mistakes, and suggests practical solutions, maintaining a logical flow. The informativeness score is strong, as the post addresses multiple aspects of why morning routines often fail, such as drastic changes, misaligned routines, and lack of flexibility. However, it could include more detailed strategies or examples for readers to improve their routines, slightly limiting its informativeness. The post is concise, effectively communicating its main points without unnecessary elaboration. Each paragraph contributes directly to the overarching thesis, and the suggestion to focus on sustainability over perfection is a succinct, actionable takeaway for readers. Overall, the post is well-structured and delivers its message efficiently.",
+    "parse_error": null,
+    "raw_content": "{\n  \"scores\": {\n    \"coherence\": 9,\n    \"informativeness\": 8,\n    \"conciseness\": 9\n  },\n  \"justification\": \"The blog post is highly coherent, presenting a clear argument about the challenges and misconceptions surrounding morning routines. The author introduces the problem, explains common mistakes, and suggests practical solutions, maintaining a logical flow. The informativeness score is strong, as the post addresses multiple aspects of why morning routines often fail, such as drastic changes, misaligned routines, and lack of flexibility. However, it could include more detailed strategies or examples for readers to improve their routines, slightly limiting its informativeness. The post is concise, effectively communicating its main points without unnecessary elaboration. Each paragraph contributes directly to the overarching thesis, and the suggestion to focus on sustainability over perfection is a succinct, actionable takeaway for readers. Overall, the post is well-structured and delivers its message efficiently.\" \n}"
+  }
+}

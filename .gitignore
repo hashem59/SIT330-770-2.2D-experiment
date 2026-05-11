@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.env
+.env.local
+
+# macOS
+.DS_Store
+~$*
+
+# LaTeX build artefacts (paper/Makefile regenerates these)
+paper/*.aux
+paper/*.bbl
+paper/*.bcf
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.run.xml
+paper/*.toc
+paper/*.synctex.gz
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local secrets — never commit
+.mcp.json
+**/.env

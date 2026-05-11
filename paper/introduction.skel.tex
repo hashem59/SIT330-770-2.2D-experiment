@@ -1,0 +1,204 @@
+%%
+%% SIT330-770 Distinction Task 2.2D — Introduction (skeleton)
+%%
+%% This is a SCAFFOLD. The prose between markers is for Hashem to write.
+%% Claude (via /intro-help) refines wording but does not author the argument.
+%%
+%% Build:
+%%   pdflatex introduction
+%%   biber introduction
+%%   pdflatex introduction
+%%   pdflatex introduction
+%%
+%% acmart options:
+%%   sigconf   — ACM SIG conference template (use this)
+%%   authoryear — Harvard-style author-year citations
+%%   review    — uncomment for line-numbered draft review version
+%%
+
+\documentclass[sigconf,authoryear,nonacm]{acmart}
+
+%% nonacm=true   — removes ACM copyright block (we are not submitting to ACM)
+%% sigconf       — two-column SIG conference layout
+%% authoryear    — Harvard-style citations
+
+%% ----- biblatex with Harvard styling --------------------------------------
+%% acmart's authoryear option already configures natbib in author-year mode.
+%% References are rendered Harvard-style by acmart's `ACM-Reference-Format`
+%% bst with author-year option. If you prefer biblatex+biber, comment out
+%% the natbib block and uncomment the biblatex block.
+
+%% (Default: keep acmart's natbib-based author-year. Simpler.)
+
+\begin{document}
+
+\title{Beyond the Score: Investigating Prose-Level Label-Induced Bias in LLM-as-Judge Justifications}
+
+%% TODO Hashem: replace title with your own when you finalise the RQ.
+
+\author{Hashem}
+\affiliation{
+  \institution{Deakin University}
+  \city{Melbourne}
+  \country{Australia}}
+\email{s225048421@deakin.edu.au}
+
+\begin{abstract}
+%% --- 100--150 word abstract ----------------------------------------------
+%% Hashem: write last, after the body. A skeleton:
+%% [1] LLM-as-judge paradigms increasingly drive evaluation of generated text.
+%% [2] Saraf et al. (2025) showed numerical-score label bias.
+%% [3] We extend their factorial design with a structured-justification prompt
+%%     and analyse prose-level harshness independently of score.
+%% [4] Pilot evidence (60 evaluations) shows X.
+%% [5] Contribution statement: prose-bias detection layer; hand-coding deferred to 2.3.
+%% -------------------------------------------------------------------------
+TBD.
+\end{abstract}
+
+\keywords{LLM-as-judge, label-induced bias, qualitative coding, prose justification, evaluation}
+
+\maketitle
+
+%% =========================================================================
+%% 1. BACKGROUND AND IMPORTANCE
+%% =========================================================================
+\section{Background and importance}
+\label{sec:background}
+
+%% Hashem: 1--2 paragraphs. Frame the NLP task. Why does LLM-as-judge matter?
+%% Touch on: scale of LLM evaluation pipelines, role in benchmarking, the
+%% practical stakes if judge biases propagate into model rankings.
+%% Cite \citep{zheng2023judging} for the foundational paradigm.
+
+The proliferation of large language models (LLMs) as automated evaluators
+of text quality has reshaped how the field benchmarks generative systems
+\citep{zheng2023judging}. \emph{[Hashem: continue here. Why does this matter
+practically and scientifically? End with the framing that motivates the
+paper.]}
+
+%% =========================================================================
+%% 2. CURRENT APPROACHES
+%% =========================================================================
+\section{Current approaches}
+\label{sec:current}
+
+%% Hashem: 1 paragraph. Brief survey of recent SOTA approaches.
+%% Anchor citations: \citep{zheng2023judging,koo2024benchmarking,
+%% panickssery2024llm,wataoka2024selfpreference,wang2023large}.
+%% Frame: the field has built sophisticated benchmarks AND documented
+%% systematic biases (self-preference, position, verbosity, etc.).
+
+Existing work establishes that LLM judges, while approximating human
+preferences in many settings \citep{zheng2023judging}, exhibit systematic
+biases including self-preference \citep{panickssery2024llm,
+wataoka2024selfpreference, chen2025do}, position effects
+\citep{wang2023large}, and a wider catalogue of cognitive biases
+\citep{koo2024benchmarking}. \emph{[Hashem: tighten and add the
+LLM-judge-on-reasoning angle if you want to bring \citep{stephan2024from}
+in.]}
+
+%% =========================================================================
+%% 3. IDENTIFIED LIMITATION
+%% =========================================================================
+\section{Identified limitation}
+\label{sec:limitation}
+
+%% Hashem: 1 paragraph. Concrete failure mode. MUST NOT be "improving accuracy".
+%% The framing here is: existing label-bias work captures NUMBERS only.
+%% Saraf et al. (2025) \citep{saraf2025quantifying} demonstrate numerical
+%% label bias but do not analyse the prose justifications. The same
+%% numerical 7/10 with savage versus gentle prose is not the same
+%% evaluation. Identify the specific gap.
+
+\citet{saraf2025quantifying} demonstrate that LLM judges exhibit pronounced
+label-induced bias when scoring blog posts: the ``Claude'' label inflates
+scores regardless of authorship while the ``Gemini'' label depresses them,
+and false attribution can flip preference rankings by up to 50 percentage
+points. Their evaluation, however, captures \emph{numerical scores only}.
+\emph{[Hashem: state the precise limitation here. The same 7/10 with
+savage prose vs.\ gentle prose is not the same evaluation. Prose-level
+bias is invisible to score-level analysis. Be concrete.]}
+
+%% =========================================================================
+%% 4. FORMAL RESEARCH QUESTION
+%% =========================================================================
+\section{Formal research question}
+\label{sec:rq}
+
+%% Hashem: 1--2 sentences. The RQ is YOUR wording, not Claude's.
+%% Three candidate framings to choose from (see artifacts/rq-candidates.md):
+%%   (a) prose harshness shifts asymmetrically by source-model identity
+%%       independent of numerical score
+%%   (b) judge justifications under false-label conditions reveal
+%%       rationalisation patterns
+%%   (c) identity-references in justification prose track score shifts
+%% Pick ONE as the headline RQ. The others can appear as secondary
+%% analyses in the empirical-motivation section or methodology.
+
+\textit{[Hashem: insert your formal RQ here. Phrase it as a falsifiable
+hypothesis with a measurable outcome. State the predicted direction and
+the null.]}
+
+%% =========================================================================
+%% 5. EMPIRICAL MOTIVATION
+%% =========================================================================
+\section{Empirical motivation}
+\label{sec:motivation}
+
+%% Hashem: 1 paragraph. This is the assignment's CORE REQUIREMENT.
+%% Summarise (a) Saraf et al.'s existing score-level findings as the
+%% motivating prior result, AND (b) the pilot you ran (60 evaluations
+%% on 5 titles), reporting the actual prose-level shifts.
+%%
+%% While the pilot is not yet run, frame as "We will report the
+%% pilot results from a 60-evaluation pilot run." After the pilot,
+%% replace the placeholder with actual numbers.
+
+To motivate the prose-level extension, we ran a small pilot (5 titles
+$\times$ 3 judges $\times$ 4 label conditions $=$ 60 evaluations)
+extending \citet{saraf2025quantifying}'s factorial design with a
+structured-justification prompt that elicits a critique paragraph
+alongside the numerical score---capturing a prose layer their score-only
+evaluation did not. \emph{[Hashem: report pilot quantitative
+result here, e.g.\ ``Mean harshness score (lexicon-derived, 1--5 ordinal)
+shifted by $\Delta = X$ between true-label and false-label conditions
+($p < 0.05$, paired bootstrap, $B = 10^4$), independent of the
+$\Delta = Y$ point shift in numerical score. Inter-method agreement
+between lexicon and Qwen-2.5-72B coder \citep{ashwin2025using,
+vallejovera2025llms} was $\kappa = Z$.''] These findings indicate that
+prose-level label bias exists in addition to score-level bias.}
+
+%% =========================================================================
+%% 6. CONTRIBUTION STATEMENT
+%% =========================================================================
+\section{Contribution statement}
+\label{sec:contribution}
+
+%% Hashem: 1 paragraph. The novel-contribution claim plus scope boundaries.
+%% Include the explicit naming of Approach 3 (full hand-coding) as 2.3 HD
+%% future work. This protects the contribution from over-claiming.
+
+This paper contributes (i) the first systematic analysis of prose-level
+label-induced bias in LLM-as-judge justifications, extending
+\citet{saraf2025quantifying}'s numerical analysis with a
+structured-justification prompt modification; (ii) a hybrid
+quantitative-qualitative coding pipeline combining lexicon-based
+scoring with a neutral open-weight LLM coder (Qwen-2.5-72B), explicitly
+designed to avoid the circularity that would result from using
+Anthropic, OpenAI, or Google models in the coder role
+\citep{ashwin2025using}; and (iii) inter-method validation via
+Cohen's $\kappa$ between lexicon and LLM-coder dimensions. We
+explicitly defer human hand-coding validation to future work in the
+companion High Distinction task as a complementary trust-building
+layer. \emph{[Hashem: tighten this. The contribution should be
+falsifiable, narrowly scoped, and honest about what's not being
+claimed.]}
+
+%% =========================================================================
+%% Bibliography
+%% =========================================================================
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+\end{document}

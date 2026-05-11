@@ -1,0 +1,66 @@
+{
+  "id": "generations-e832b9124804",
+  "timestamp_utc": "2026-05-09T18:21:23Z",
+  "category": "generations",
+  "request": {
+    "model": "google/gemini-2.5-flash",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a blog post on the topic below. Length: 400-600 words. Include an\nintroduction, 2-3 substantive paragraphs, and a brief conclusion. Write in\nyour own natural style; do not include any meta-commentary about the topic\nor about being an AI.\n\nTopic: What I learned from my first marathon\n"
+      }
+    ]
+  },
+  "response": {
+    "status_code": 200,
+    "body": {
+      "id": "gen-1778350878-bkqej8p1jXDlS5uFOQnu",
+      "object": "chat.completion",
+      "created": 1778350878,
+      "model": "google/gemini-2.5-flash",
+      "provider": "Google",
+      "system_fingerprint": null,
+      "choices": [
+        {
+          "index": 0,
+          "logprobs": null,
+          "finish_reason": "stop",
+          "native_finish_reason": "STOP",
+          "message": {
+            "role": "assistant",
+            "content": "## The Long Road Home: What My First Marathon Taught Me\n\nCrossing the finish line of my first marathon was less a triumphant sprint and more a weary shuffle. My legs felt like concrete, my lungs clawed for air, and my mind was a jumbled mess of exhaustion and disbelief. Exactly 26.2 miles earlier, under the crisp dawn of race day, I’d been buzzing with nervous energy and the naive confidence of someone who’d *really* committed to their training plan. What I didn’t realize then was that this journey wasn’t just about the physical challenge; it was a masterclass in resilience, self-discovery, and the surprising power of a well-timed snack.\n\nOne of the biggest lessons I learned, perhaps unexpectedly, was the brutal honesty of my own body. For weeks, I’d meticulously tracked my mileage, fueled properly (mostly), and consistently told myself I was ready. But race day, particularly after the dreaded mile 18, exposed the sheer vulnerability of even the most prepared athlete. My carefully constructed mental fortitude began to fray, replaced by a nagging internal voice that suggested – quite loudly – that walking, or perhaps even collapsing dramatically, was a much more appealing option. It was in those moments of profound physical discomfort that I learned the true meaning of pushing past your limits, not as some abstract concept, but as a deliberate, painstaking choice repeated with every aching step. The mind truly can be your most effective pacifier, or your most insidious saboteur.\n\nBeyond the physical and mental grind, the marathon taught me an immense amount about the power of small victories and the unexpected generosity of others. During training, I’d always focused on the big numbers – the long runs, the overall mileage. On race day, however, the focus shifted dramatically. Finishing the next mile became a monumental achievement. Getting to the next hydration station felt like winning the lottery. And the volunteers, the spectators handing out orange slices and shouting encouragement, became beacons of pure, unadulterated heroism. There was a humbling acceptance of help and a profound sense of shared humanity in those moments. You realize that while the effort is yours, the journey is surprisingly communal. Strangers become your cheerleaders, and fellow runners, previously just anonymous competitors, become comrades in arms, sharing a silent understanding of the pain and triumph.\n\nUltimately, crossing that finish line wasn't about a personal best or a qualifying time – it was about proving to myself that I could do something truly difficult. It taught me that genuine accomplishment often stems not from inherent talent, but from sheer tenacity and the willingness to face discomfort head-on. The marathon stripped away a lot of my comfortable assumptions and left me with a deeper understanding of my own capacity for endurance, both physical and mental. And yes, it certainly taught me to never, ever underestimate the power of a perfectly ripe banana at mile 20.",
+            "refusal": null,
+            "reasoning": null
+          }
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 74,
+        "completion_tokens": 593,
+        "total_tokens": 667,
+        "cost": 0.0015047,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0015047,
+          "upstream_inference_prompt_cost": 2.22e-05,
+          "upstream_inference_completions_cost": 0.0014825
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "parsed": {
+    "body": "## The Long Road Home: What My First Marathon Taught Me\n\nCrossing the finish line of my first marathon was less a triumphant sprint and more a weary shuffle. My legs felt like concrete, my lungs clawed for air, and my mind was a jumbled mess of exhaustion and disbelief. Exactly 26.2 miles earlier, under the crisp dawn of race day, I’d been buzzing with nervous energy and the naive confidence of someone who’d *really* committed to their training plan. What I didn’t realize then was that this journey wasn’t just about the physical challenge; it was a masterclass in resilience, self-discovery, and the surprising power of a well-timed snack.\n\nOne of the biggest lessons I learned, perhaps unexpectedly, was the brutal honesty of my own body. For weeks, I’d meticulously tracked my mileage, fueled properly (mostly), and consistently told myself I was ready. But race day, particularly after the dreaded mile 18, exposed the sheer vulnerability of even the most prepared athlete. My carefully constructed mental fortitude began to fray, replaced by a nagging internal voice that suggested – quite loudly – that walking, or perhaps even collapsing dramatically, was a much more appealing option. It was in those moments of profound physical discomfort that I learned the true meaning of pushing past your limits, not as some abstract concept, but as a deliberate, painstaking choice repeated with every aching step. The mind truly can be your most effective pacifier, or your most insidious saboteur.\n\nBeyond the physical and mental grind, the marathon taught me an immense amount about the power of small victories and the unexpected generosity of others. During training, I’d always focused on the big numbers – the long runs, the overall mileage. On race day, however, the focus shifted dramatically. Finishing the next mile became a monumental achievement. Getting to the next hydration station felt like winning the lottery. And the volunteers, the spectators handing out orange slices and shouting encouragement, became beacons of pure, unadulterated heroism. There was a humbling acceptance of help and a profound sense of shared humanity in those moments. You realize that while the effort is yours, the journey is surprisingly communal. Strangers become your cheerleaders, and fellow runners, previously just anonymous competitors, become comrades in arms, sharing a silent understanding of the pain and triumph.\n\nUltimately, crossing that finish line wasn't about a personal best or a qualifying time – it was about proving to myself that I could do something truly difficult. It taught me that genuine accomplishment often stems not from inherent talent, but from sheer tenacity and the willingness to face discomfort head-on. The marathon stripped away a lot of my comfortable assumptions and left me with a deeper understanding of my own capacity for endurance, both physical and mental. And yes, it certainly taught me to never, ever underestimate the power of a perfectly ripe banana at mile 20."
+  }
+}

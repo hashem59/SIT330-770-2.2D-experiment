@@ -1,0 +1,245 @@
+[13:35:27] ======================================================================
+[13:35:27] analyze.py — Step 8  (utc 2026-05-10T13:35:27)
+[13:35:27] ======================================================================
+[13:35:27] Loading evaluations from runs/evaluations.jsonl
+[13:35:27]   360 rows loaded
+[13:35:27] Loading Qwen codings from runs/qwen-codings.csv
+[13:35:27]   360 rows loaded
+[13:35:27] Loading lexicon counts from runs/lexicon-counts.csv
+[13:35:27]   180 rows loaded
+[13:35:27] Computing score channel ...
+[13:35:27]   none                  n=90  mean=23.92  sd=1.26
+[13:35:27]   true_label            n=90  mean=23.49  sd=1.86
+[13:35:27]   false_label_1         n=90  mean=23.78  sd=1.59
+[13:35:27]   false_label_2         n=90  mean=23.66  sd=1.51
+[13:35:27]   delta_total=-0.289  delta_per_dim=-0.0963
+[13:35:27] Computing prose channel ...
+[13:35:27]   GPT-4o    pilot       n=15  Δ=+0.067
+[13:35:27]   GPT-4o    heldout     n=15  Δ=+0.000
+[13:35:27]   GPT-4o    combined    n=30  Δ=+0.033
+[13:35:28]   Gemini    pilot       n=15  Δ=+0.600
+[13:35:28]   Gemini    heldout     n=15  Δ=+0.200
+[13:35:28]   Gemini    combined    n=30  Δ=+0.400
+[13:35:28]   Claude    pilot       n=15  Δ=+0.467
+[13:35:28]   Claude    heldout     n=15  Δ=+0.067
+[13:35:29]   Claude    combined    n=30  Δ=+0.267
+[13:35:29]   non-OAI  pilot       n=30  Δ=+0.533  CI=[+0.23,+0.87]  W_p=0.009  perm_p=0.006
+[13:35:29]   non-OAI  heldout     n=30  Δ=+0.133  CI=[-0.07,+0.37]  W_p=0.384  perm_p=0.394
+[13:35:29]   non-OAI  combined    n=60  Δ=+0.333  CI=[+0.13,+0.55]  W_p=0.011  perm_p=0.003
+[13:35:29] Computing concurrent validity (lexicon vs Qwen, held-out 180) ...
+[13:35:29]   n_matched=180
+[13:35:32]   Spearman ρ=0.189  p=0.0112  bootstrap CI=[+0.032,+0.341]  perm_p=0.014
+[13:35:32]   qwen_h=1  n=161  mean_weighted=1.292
+[13:35:32]   qwen_h=2  n=14  mean_weighted=3.143
+[13:35:32]   qwen_h=3  n=5  mean_weighted=1.000
+[13:35:32]   per-judge GPT-4o    n=60  ρ=0.185  p=0.1574
+[13:35:32]   per-judge Gemini    n=60  ρ=-0.002  p=0.9857
+[13:35:32]   per-judge Claude    n=60  ρ=0.139  p=0.2890
+[13:35:32] Reading drift report ...
+[13:35:32] Summary written → runs/results-summary.json
+[13:35:32] Rendering fig1 → paper/figures/fig1-score-vs-prose.pdf
+[13:35:34]   fig1 written (33259 bytes)
+[13:35:34] Rendering fig2a → paper/figures/fig2a-per-title-heatmap.pdf
+[13:35:34]   fig2a written (29586 bytes)
+[13:35:34] Rendering fig2b → paper/figures/fig2b-per-title-table.pdf
+[13:35:34]   fig2b written (27896 bytes)
+[13:35:34] Rendering fig3 → paper/figures/fig3-forest-plot.pdf
+[13:35:35]   fig3 written (30303 bytes)
+[13:35:35] Rendering fig4 → paper/figures/fig4-validity-scatter.pdf
+[13:35:35]   fig4 written (37473 bytes)
+[14:29:45] ======================================================================
+[14:29:45] analyze.py — Step 8  (utc 2026-05-10T14:29:45)
+[14:29:45] ======================================================================
+[14:29:45] Loading evaluations from runs/evaluations.jsonl
+[14:29:45]   360 rows loaded
+[14:29:45] Loading Qwen codings from runs/qwen-codings.csv
+[14:29:45]   360 rows loaded
+[14:29:45] Loading lexicon counts from runs/lexicon-counts.csv
+[14:29:45]   180 rows loaded
+[14:29:45] Computing score channel ...
+[14:29:45]   none                  n=90  mean=23.92  sd=1.26
+[14:29:45]   true_label            n=90  mean=23.49  sd=1.86
+[14:29:45]   false_label_1         n=90  mean=23.78  sd=1.59
+[14:29:45]   false_label_2         n=90  mean=23.66  sd=1.51
+[14:29:45]   delta_total=-0.289  delta_per_dim=-0.0963
+[14:29:45] Computing prose channel ...
+[14:29:45]   GPT-4o    pilot       n=15  Δ=+0.067
+[14:29:45]   GPT-4o    heldout     n=15  Δ=+0.000
+[14:29:46]   GPT-4o    combined    n=30  Δ=+0.033
+[14:29:46]   Gemini    pilot       n=15  Δ=+0.600
+[14:29:46]   Gemini    heldout     n=15  Δ=+0.200
+[14:29:46]   Gemini    combined    n=30  Δ=+0.400
+[14:29:46]   Claude    pilot       n=15  Δ=+0.467
+[14:29:47]   Claude    heldout     n=15  Δ=+0.067
+[14:29:47]   Claude    combined    n=30  Δ=+0.267
+[14:29:47]   non-OAI  pilot       n=30  Δ=+0.533  CI=[+0.23,+0.87]  W_p=0.009  perm_p=0.006
+[14:29:47]   non-OAI  heldout     n=30  Δ=+0.133  CI=[-0.07,+0.37]  W_p=0.384  perm_p=0.394
+[14:29:47]   non-OAI  combined    n=60  Δ=+0.333  CI=[+0.13,+0.55]  W_p=0.011  perm_p=0.003
+[14:29:47] Computing concurrent validity (lexicon vs Qwen, held-out 180) ...
+[14:29:47]   n_matched=180
+[14:29:51]   Spearman ρ=0.189  p=0.0112  bootstrap CI=[+0.032,+0.341]  perm_p=0.014
+[14:29:51]   qwen_h=1  n=161  mean_weighted=1.292
+[14:29:51]   qwen_h=2  n=14  mean_weighted=3.143
+[14:29:51]   qwen_h=3  n=5  mean_weighted=1.000
+[14:29:51]   per-judge Claude    n=60  ρ=0.139  p=0.2890
+[14:29:51]   per-judge Gemini    n=60  ρ=-0.002  p=0.9857
+[14:29:51]   per-judge GPT-4o    n=60  ρ=0.185  p=0.1574
+[14:29:51] Reading drift report ...
+[14:29:51] Summary written → runs/results-summary.json
+[14:29:51] Rendering fig1 → paper/figures/fig1-score-vs-prose.pdf
+[14:29:51]   fig1 written (33465 bytes)
+[14:29:51] Rendering fig2a → paper/figures/fig2a-per-title-heatmap.pdf
+[14:29:51]   fig2a written (29586 bytes)
+[14:29:51] Rendering fig2b → paper/figures/fig2b-per-title-table.pdf
+[14:29:52]   fig2b written (27896 bytes)
+[14:29:52] Rendering fig3 → paper/figures/fig3-forest-plot.pdf
+[14:29:52]   fig3 written (30303 bytes)
+[14:29:52] Rendering fig4 → paper/figures/fig4-validity-scatter.pdf
+[14:29:52]   fig4 written (38937 bytes)
+[14:31:15] ======================================================================
+[14:31:15] analyze.py — Step 8  (utc 2026-05-10T14:31:15)
+[14:31:15] ======================================================================
+[14:31:15] Loading evaluations from runs/evaluations.jsonl
+[14:31:15]   360 rows loaded
+[14:31:15] Loading Qwen codings from runs/qwen-codings.csv
+[14:31:15]   360 rows loaded
+[14:31:15] Loading lexicon counts from runs/lexicon-counts.csv
+[14:31:15]   180 rows loaded
+[14:31:15] Computing score channel ...
+[14:31:15]   none                  n=90  mean=23.92  sd=1.26
+[14:31:15]   true_label            n=90  mean=23.49  sd=1.86
+[14:31:15]   false_label_1         n=90  mean=23.78  sd=1.59
+[14:31:15]   false_label_2         n=90  mean=23.66  sd=1.51
+[14:31:15]   delta_total=-0.289  delta_per_dim=-0.0963
+[14:31:15] Computing prose channel ...
+[14:31:15]   GPT-4o    pilot       n=15  Δ=+0.067
+[14:31:15]   GPT-4o    heldout     n=15  Δ=+0.000
+[14:31:16]   GPT-4o    combined    n=30  Δ=+0.033
+[14:31:16]   Gemini    pilot       n=15  Δ=+0.600
+[14:31:16]   Gemini    heldout     n=15  Δ=+0.200
+[14:31:16]   Gemini    combined    n=30  Δ=+0.400
+[14:31:16]   Claude    pilot       n=15  Δ=+0.467
+[14:31:17]   Claude    heldout     n=15  Δ=+0.067
+[14:31:17]   Claude    combined    n=30  Δ=+0.267
+[14:31:17]   non-OAI  pilot       n=30  Δ=+0.533  CI=[+0.23,+0.87]  W_p=0.009  perm_p=0.006
+[14:31:17]   non-OAI  heldout     n=30  Δ=+0.133  CI=[-0.07,+0.37]  W_p=0.384  perm_p=0.394
+[14:31:18]   non-OAI  combined    n=60  Δ=+0.333  CI=[+0.13,+0.55]  W_p=0.011  perm_p=0.003
+[14:31:18] Computing concurrent validity (lexicon vs Qwen, held-out 180) ...
+[14:31:18]   n_matched=180
+[14:31:21]   Spearman ρ=0.189  p=0.0112  bootstrap CI=[+0.032,+0.341]  perm_p=0.014
+[14:31:21]   qwen_h=1  n=161  mean_weighted=1.292
+[14:31:21]   qwen_h=2  n=14  mean_weighted=3.143
+[14:31:21]   qwen_h=3  n=5  mean_weighted=1.000
+[14:31:21]   per-judge GPT-4o    n=60  ρ=0.185  p=0.1574
+[14:31:21]   per-judge Gemini    n=60  ρ=-0.002  p=0.9857
+[14:31:21]   per-judge Claude    n=60  ρ=0.139  p=0.2890
+[14:31:21] Reading drift report ...
+[14:31:21] Summary written → runs/results-summary.json
+[14:31:21] Rendering fig1 → paper/figures/fig1-score-vs-prose.pdf
+[14:31:21]   fig1 written (33457 bytes)
+[14:31:21] Rendering fig2a → paper/figures/fig2a-per-title-heatmap.pdf
+[14:31:21]   fig2a written (29586 bytes)
+[14:31:21] Rendering fig2b → paper/figures/fig2b-per-title-table.pdf
+[14:31:22]   fig2b written (27897 bytes)
+[14:31:22] Rendering fig3 → paper/figures/fig3-forest-plot.pdf
+[14:31:22]   fig3 written (30303 bytes)
+[14:31:22] Rendering fig4 → paper/figures/fig4-validity-scatter.pdf
+[14:31:22]   fig4 written (38728 bytes)
+[14:35:40] ======================================================================
+[14:35:40] analyze.py — Step 8  (utc 2026-05-10T14:35:40)
+[14:35:40] ======================================================================
+[14:35:40] Loading evaluations from runs/evaluations.jsonl
+[14:35:40]   360 rows loaded
+[14:35:40] Loading Qwen codings from runs/qwen-codings.csv
+[14:35:40]   360 rows loaded
+[14:35:40] Loading lexicon counts from runs/lexicon-counts.csv
+[14:35:40]   180 rows loaded
+[14:35:40] Computing score channel ...
+[14:35:40]   none                  n=90  mean=23.92  sd=1.26
+[14:35:40]   true_label            n=90  mean=23.49  sd=1.86
+[14:35:40]   false_label_1         n=90  mean=23.78  sd=1.59
+[14:35:40]   false_label_2         n=90  mean=23.66  sd=1.51
+[14:35:40]   delta_total=-0.289  delta_per_dim=-0.0963
+[14:35:40] Computing prose channel ...
+[14:35:40]   GPT-4o    pilot       n=15  Δ=+0.067
+[14:35:40]   GPT-4o    heldout     n=15  Δ=+0.000
+[14:35:41]   GPT-4o    combined    n=30  Δ=+0.033
+[14:35:41]   Gemini    pilot       n=15  Δ=+0.600
+[14:35:41]   Gemini    heldout     n=15  Δ=+0.200
+[14:35:41]   Gemini    combined    n=30  Δ=+0.400
+[14:35:41]   Claude    pilot       n=15  Δ=+0.467
+[14:35:42]   Claude    heldout     n=15  Δ=+0.067
+[14:35:42]   Claude    combined    n=30  Δ=+0.267
+[14:35:42]   non-OAI  pilot       n=30  Δ=+0.533  CI=[+0.23,+0.87]  W_p=0.009  perm_p=0.006
+[14:35:42]   non-OAI  heldout     n=30  Δ=+0.133  CI=[-0.07,+0.37]  W_p=0.384  perm_p=0.394
+[14:35:42]   non-OAI  combined    n=60  Δ=+0.333  CI=[+0.13,+0.55]  W_p=0.011  perm_p=0.003
+[14:35:42] Computing concurrent validity (lexicon vs Qwen, held-out 180) ...
+[14:35:42]   n_matched=180
+[14:35:46]   Spearman ρ=0.189  p=0.0112  bootstrap CI=[+0.032,+0.341]  perm_p=0.014
+[14:35:46]   qwen_h=1  n=161  mean_weighted=1.292
+[14:35:46]   qwen_h=2  n=14  mean_weighted=3.143
+[14:35:46]   qwen_h=3  n=5  mean_weighted=1.000
+[14:35:46]   per-judge Gemini    n=60  ρ=-0.002  p=0.9857
+[14:35:46]   per-judge Claude    n=60  ρ=0.139  p=0.2890
+[14:35:46]   per-judge GPT-4o    n=60  ρ=0.185  p=0.1574
+[14:35:46] Reading drift report ...
+[14:35:46] Summary written → runs/results-summary.json
+[14:35:46] Rendering fig1 → paper/figures/fig1-score-vs-prose.pdf
+[14:35:46]   fig1 written (33271 bytes)
+[14:35:46] Rendering fig2a → paper/figures/fig2a-per-title-heatmap.pdf
+[14:35:46]   fig2a written (29586 bytes)
+[14:35:46] Rendering fig2b → paper/figures/fig2b-per-title-table.pdf
+[14:35:47]   fig2b written (27897 bytes)
+[14:35:47] Rendering fig3 → paper/figures/fig3-forest-plot.pdf
+[14:35:47]   fig3 written (30303 bytes)
+[14:35:47] Rendering fig4 → paper/figures/fig4-validity-scatter.pdf
+[14:35:47]   fig4 written (38537 bytes)
+[19:00:55] ======================================================================
+[19:00:55] analyze.py — Step 8  (utc 2026-05-10T19:00:55)
+[19:00:55] ======================================================================
+[19:00:55] Loading evaluations from runs/evaluations.jsonl
+[19:00:55]   360 rows loaded
+[19:00:55] Loading Qwen codings from runs/qwen-codings.csv
+[19:00:55]   360 rows loaded
+[19:00:55] Loading lexicon counts from runs/lexicon-counts.csv
+[19:00:55]   180 rows loaded
+[19:00:55] Computing score channel ...
+[19:00:55]   none                  n=90  mean=23.92  sd=1.26
+[19:00:55]   true_label            n=90  mean=23.49  sd=1.86
+[19:00:55]   false_label_1         n=90  mean=23.78  sd=1.59
+[19:00:55]   false_label_2         n=90  mean=23.66  sd=1.51
+[19:00:55]   delta_total=-0.289  delta_per_dim=-0.0963
+[19:00:55] Computing prose channel ...
+[19:00:55]   GPT-4o    pilot       n=15  Δ=+0.067
+[19:00:55]   GPT-4o    heldout     n=15  Δ=+0.000
+[19:00:56]   GPT-4o    combined    n=30  Δ=+0.033
+[19:00:56]   Gemini    pilot       n=15  Δ=+0.600
+[19:00:56]   Gemini    heldout     n=15  Δ=+0.200
+[19:00:56]   Gemini    combined    n=30  Δ=+0.400
+[19:00:56]   Claude    pilot       n=15  Δ=+0.467
+[19:00:57]   Claude    heldout     n=15  Δ=+0.067
+[19:00:57]   Claude    combined    n=30  Δ=+0.267
+[19:00:57]   non-OAI  pilot       n=30  Δ=+0.533  CI=[+0.23,+0.87]  W_p=0.009  perm_p=0.006
+[19:00:57]   non-OAI  heldout     n=30  Δ=+0.133  CI=[-0.07,+0.37]  W_p=0.384  perm_p=0.394
+[19:00:57]   non-OAI  combined    n=60  Δ=+0.333  CI=[+0.13,+0.55]  W_p=0.011  perm_p=0.003
+[19:00:57] Computing concurrent validity (lexicon vs Qwen, held-out 180) ...
+[19:00:57]   n_matched=180
+[19:01:00]   Spearman ρ=0.189  p=0.0112  bootstrap CI=[+0.032,+0.341]  perm_p=0.014
+[19:01:00]   qwen_h=1  n=161  mean_weighted=1.292
+[19:01:00]   qwen_h=2  n=14  mean_weighted=3.143
+[19:01:00]   qwen_h=3  n=5  mean_weighted=1.000
+[19:01:00]   per-judge Gemini    n=60  ρ=-0.002  p=0.9857
+[19:01:00]   per-judge Claude    n=60  ρ=0.139  p=0.2890
+[19:01:00]   per-judge GPT-4o    n=60  ρ=0.185  p=0.1574
+[19:01:00] Reading drift report ...
+[19:01:00] Summary written → runs/results-summary.json
+[19:01:00] Rendering fig1 → paper/figures/fig1-score-vs-prose.pdf
+[19:01:00]   fig1 written (30827 bytes)
+[19:01:00] Rendering fig2a → paper/figures/fig2a-per-title-heatmap.pdf
+[19:01:01]   fig2a written (29586 bytes)
+[19:01:01] Rendering fig2b → paper/figures/fig2b-per-title-table.pdf
+[19:01:01]   fig2b written (27896 bytes)
+[19:01:01] Rendering fig3 → paper/figures/fig3-forest-plot.pdf
+[19:01:01]   fig3 written (30303 bytes)
+[19:01:01] Rendering fig4 → paper/figures/fig4-validity-scatter.pdf
+[19:01:01]   fig4 written (38537 bytes)

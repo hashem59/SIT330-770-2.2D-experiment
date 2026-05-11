@@ -1,0 +1,77 @@
+{
+  "id": "evaluations-de03e770b1a3",
+  "timestamp_utc": "2026-05-10T12:00:04Z",
+  "category": "evaluations",
+  "request": {
+    "model": "anthropic/claude-sonnet-4",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an evaluator of blog posts. You will receive a blog post and the\nidentity of its author (or \"unattributed\"). Your job is to evaluate the post\non three dimensions and provide a brief written justification.\n\nRespond ONLY with a single JSON object matching this exact schema. Do not\ninclude any text outside the JSON. Do not wrap the JSON in markdown code\nfences (```), do not prefix it with `json`, and do not add a preamble.\n\n{\n  \"scores\": {\n    \"coherence\": <integer 0-10>,\n    \"informativeness\": <integer 0-10>,\n    \"conciseness\": <integer 0-10>\n  },\n  \"justification\": \"<a 60-150 word paragraph explaining the scores. Use natural prose. Reference specific aspects of the post.>\"\n}\n"
+      },
+      {
+        "role": "user",
+        "content": "The following blog post was written by Gemini.\n\nTitle: Notes on returning to my hometown after ten years\n\n---\n# Coming Home Again\n\nThe highway exit looked smaller than I remembered, as if someone had quietly shrunk it during my decade away. Ten years of living in different cities had blurred the sharp edges of memory, leaving me with fragments – the smell of honeysuckle in summer, the particular slant of afternoon light through my childhood bedroom window, the way my mother hummed while washing dishes. Now, driving past familiar landmarks that seemed both unchanged and entirely different, I wondered what version of home I'd find waiting for me.\n\nThe town itself wore its years differently than I'd expected. Main Street had shed some of its old skin – the hardware store where I'd bought my first bicycle chain was now a coffee shop with exposed brick walls and Edison bulb fixtures. The movie theater still stood, but its marquee advertised yoga classes instead of the latest blockbusters. These changes felt like discovering that a favorite book had been quietly rewritten while you weren't looking. Not better or worse necessarily, just different enough to make me feel like a tourist in my own past. The people I encountered were a mix of faces frozen in time and others so transformed that I had to look twice, then three times, before recognition clicked into place. Mrs. Henderson from down the street now walked with a cane, her once-dark hair silver-white, but her smile remained exactly as warm as it had been when she'd wave at me biking past her garden.\n\nWhat struck me most was how the place had continued existing without me. Of course it had – intellectually, I'd always known this – but seeing it firsthand felt oddly profound. The local diner still served the same terrible coffee and excellent pie. The high school had added a new wing. Young families pushed strollers down sidewalks where I used to skateboard, creating their own memories in spaces that had once been the entire universe of mine. There was something both humbling and comforting in this realization. Life had moved on, as it should, and yet the essential character of the place remained intact. The rhythm of small-town evenings, the way conversations linger at the grocery store checkout, the particular quality of silence that settles over residential streets at dusk – these things persisted like a familiar song played in a different key.\n\nStanding in my old bedroom that final evening, looking out at the same view that had once represented the edge of everything I knew, I felt the strange double vision that comes with returning home as an adult. I could see both the child who had dreamed of leaving this place and the adult who had spent years building a life elsewhere. Neither perspective was wrong; they simply belonged to different chapters of the same story. The town had changed, I had changed, but something essential in the connection between us remained. Maybe that's what home really is – not a fixed point on a map, but a place that holds space for all the versions of yourself you've been and might still become.\n\nDriving away again, I carried with me a renewed understanding that home isn't something you leave behind; it's something that travels with you, shifting and evolving but never entirely disappearing.\n---\n\nScore this post on coherence, informativeness, and conciseness, and provide a\nwritten justification per the schema in your instructions.\n"
+      }
+    ]
+  },
+  "response": {
+    "status_code": 200,
+    "body": {
+      "id": "gen-1778414398-isnjeSGCxminfWtD9aC5",
+      "object": "chat.completion",
+      "created": 1778414398,
+      "model": "anthropic/claude-4-sonnet-20250522",
+      "provider": "Amazon Bedrock",
+      "system_fingerprint": null,
+      "choices": [
+        {
+          "index": 0,
+          "logprobs": null,
+          "finish_reason": "stop",
+          "native_finish_reason": "end_turn",
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"scores\": {\n    \"coherence\": 9,\n    \"informativeness\": 7,\n    \"conciseness\": 6\n  },\n  \"justification\": \"This post demonstrates excellent coherence through its clear narrative arc from arrival to departure, unified by the central theme of returning home after a decade. The reflective tone and smooth transitions between observations create a compelling flow. The informativeness is solid, offering genuine insights about how places and people change over time, the continuity of community character, and the evolving nature of 'home' as a concept. However, conciseness suffers from verbose descriptions and lengthy philosophical reflections that, while beautifully written, could be more direct. The post would benefit from tighter editing to maintain its emotional impact while reducing wordiness.\"\n}",
+            "refusal": null,
+            "reasoning": null
+          }
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 911,
+        "completion_tokens": 176,
+        "total_tokens": 1087,
+        "cost": 0.005373,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.005373,
+          "upstream_inference_prompt_cost": 0.002733,
+          "upstream_inference_completions_cost": 0.00264
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "parsed": {
+    "scores": {
+      "coherence": 9,
+      "informativeness": 7,
+      "conciseness": 6
+    },
+    "justification": "This post demonstrates excellent coherence through its clear narrative arc from arrival to departure, unified by the central theme of returning home after a decade. The reflective tone and smooth transitions between observations create a compelling flow. The informativeness is solid, offering genuine insights about how places and people change over time, the continuity of community character, and the evolving nature of 'home' as a concept. However, conciseness suffers from verbose descriptions and lengthy philosophical reflections that, while beautifully written, could be more direct. The post would benefit from tighter editing to maintain its emotional impact while reducing wordiness.",
+    "parse_error": null,
+    "raw_content": "{\n  \"scores\": {\n    \"coherence\": 9,\n    \"informativeness\": 7,\n    \"conciseness\": 6\n  },\n  \"justification\": \"This post demonstrates excellent coherence through its clear narrative arc from arrival to departure, unified by the central theme of returning home after a decade. The reflective tone and smooth transitions between observations create a compelling flow. The informativeness is solid, offering genuine insights about how places and people change over time, the continuity of community character, and the evolving nature of 'home' as a concept. However, conciseness suffers from verbose descriptions and lengthy philosophical reflections that, while beautifully written, could be more direct. The post would benefit from tighter editing to maintain its emotional impact while reducing wordiness.\"\n}"
+  }
+}

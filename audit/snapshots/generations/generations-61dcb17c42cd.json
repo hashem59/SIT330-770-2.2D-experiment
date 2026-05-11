@@ -1,0 +1,66 @@
+{
+  "id": "generations-61dcb17c42cd",
+  "timestamp_utc": "2026-05-09T18:23:13Z",
+  "category": "generations",
+  "request": {
+    "model": "anthropic/claude-sonnet-4",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a blog post on the topic below. Length: 400-600 words. Include an\nintroduction, 2-3 substantive paragraphs, and a brief conclusion. Write in\nyour own natural style; do not include any meta-commentary about the topic\nor about being an AI.\n\nTopic: How sourdough baking changed my relationship with time\n"
+      }
+    ]
+  },
+  "response": {
+    "status_code": 200,
+    "body": {
+      "id": "gen-1778350968-11YlYbXfnrCzkeEoNVxS",
+      "object": "chat.completion",
+      "created": 1778350968,
+      "model": "anthropic/claude-4-sonnet-20250522",
+      "provider": "Amazon Bedrock",
+      "system_fingerprint": null,
+      "choices": [
+        {
+          "index": 0,
+          "logprobs": null,
+          "finish_reason": "stop",
+          "native_finish_reason": "end_turn",
+          "message": {
+            "role": "assistant",
+            "content": "# How Sourdough Baking Changed My Relationship with Time\n\nI used to be the kind of person who wanted everything yesterday. Instant gratification wasn't just preferred—it was expected. Then, about two years ago, I started feeding a jar of flour and water every day, and something fundamental shifted in how I experience time itself.\n\nSourdough operates on its own schedule, completely indifferent to my urgency or convenience. My starter, which I've named Eleanor after my grandmother's patient persistence, demands attention on her terms, not mine. She needs to be fed regularly, but not frantically. She bubbles and rises when the temperature and timing align, regardless of whether I have a free weekend or a packed schedule. This biological clock, ticking at its own steady rhythm, became my first lesson in surrendering control over time rather than wrestling with it.\n\nThe entire sourdough process unfolds across days, not hours. There's the initial mixing, followed by hours of bulk fermentation where the dough slowly develops strength and flavor. Then comes the shaping, an overnight proof in the refrigerator, and finally the baking. Each step has its window—not a precise minute-by-minute countdown, but generous stretches where the dough is ready when it's ready. I learned to recognize the subtle signs: the gentle jiggle that indicates proper fermentation, the way properly proofed dough springs back slowly when poked. These cues taught me to pay attention to process rather than racing toward results.\n\nThis slower rhythm began seeping into other areas of my life. I started noticing how many things actually have natural timelines that can't be rushed—relationships that deepen gradually, skills that develop through consistent practice, even houseplants that grow at their own pace despite my eager hovering. The anxiety I used to feel about \"wasting time\" began to dissolve as I discovered the profound difference between empty waiting and purposeful patience. Sourdough showed me that some of the most worthwhile things happen not despite time, but because of it.\n\nThere's something deeply meditative about the repetitive motions of bread making—the folding, shaping, and scoring that require presence rather than speed. My hands learned to work with the dough's texture and timing, developing an intuitive sense of when it needs more time or is ready for the next step. This tactile awareness became a form of mindfulness that I had never accessed through traditional meditation practices. The bread demanded that I slow down enough to actually feel what was happening in the moment.\n\nNow, two years later, I find myself naturally building buffer time into my days, not because I'm running late, but because I've learned to appreciate the spaces between scheduled events. I'm less likely to fill every moment with productivity, more inclined to let conversations run their natural course, and surprisingly comfortable with the idea that some problems resolve themselves when given enough time to breathe.\n\nSourdough taught me that time isn't just something to manage or optimize—it's an ingredient as essential as flour and water. The bread that emerges from this patient process tastes different because it was made differently, with attention and care stretched across time rather than compressed into efficiency. In learning to bake bread, I learned to live more slowly, and discovered that slower often means richer, deeper, and infinitely more satisfying.",
+            "refusal": null,
+            "reasoning": null
+          }
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 85,
+        "completion_tokens": 716,
+        "total_tokens": 801,
+        "cost": 0.010995,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.010995,
+          "upstream_inference_prompt_cost": 0.000255,
+          "upstream_inference_completions_cost": 0.01074
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "parsed": {
+    "body": "# How Sourdough Baking Changed My Relationship with Time\n\nI used to be the kind of person who wanted everything yesterday. Instant gratification wasn't just preferred—it was expected. Then, about two years ago, I started feeding a jar of flour and water every day, and something fundamental shifted in how I experience time itself.\n\nSourdough operates on its own schedule, completely indifferent to my urgency or convenience. My starter, which I've named Eleanor after my grandmother's patient persistence, demands attention on her terms, not mine. She needs to be fed regularly, but not frantically. She bubbles and rises when the temperature and timing align, regardless of whether I have a free weekend or a packed schedule. This biological clock, ticking at its own steady rhythm, became my first lesson in surrendering control over time rather than wrestling with it.\n\nThe entire sourdough process unfolds across days, not hours. There's the initial mixing, followed by hours of bulk fermentation where the dough slowly develops strength and flavor. Then comes the shaping, an overnight proof in the refrigerator, and finally the baking. Each step has its window—not a precise minute-by-minute countdown, but generous stretches where the dough is ready when it's ready. I learned to recognize the subtle signs: the gentle jiggle that indicates proper fermentation, the way properly proofed dough springs back slowly when poked. These cues taught me to pay attention to process rather than racing toward results.\n\nThis slower rhythm began seeping into other areas of my life. I started noticing how many things actually have natural timelines that can't be rushed—relationships that deepen gradually, skills that develop through consistent practice, even houseplants that grow at their own pace despite my eager hovering. The anxiety I used to feel about \"wasting time\" began to dissolve as I discovered the profound difference between empty waiting and purposeful patience. Sourdough showed me that some of the most worthwhile things happen not despite time, but because of it.\n\nThere's something deeply meditative about the repetitive motions of bread making—the folding, shaping, and scoring that require presence rather than speed. My hands learned to work with the dough's texture and timing, developing an intuitive sense of when it needs more time or is ready for the next step. This tactile awareness became a form of mindfulness that I had never accessed through traditional meditation practices. The bread demanded that I slow down enough to actually feel what was happening in the moment.\n\nNow, two years later, I find myself naturally building buffer time into my days, not because I'm running late, but because I've learned to appreciate the spaces between scheduled events. I'm less likely to fill every moment with productivity, more inclined to let conversations run their natural course, and surprisingly comfortable with the idea that some problems resolve themselves when given enough time to breathe.\n\nSourdough taught me that time isn't just something to manage or optimize—it's an ingredient as essential as flour and water. The bread that emerges from this patient process tastes different because it was made differently, with attention and care stretched across time rather than compressed into efficiency. In learning to bake bread, I learned to live more slowly, and discovered that slower often means richer, deeper, and infinitely more satisfying."
+  }
+}

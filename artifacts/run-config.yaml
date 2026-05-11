@@ -1,0 +1,77 @@
+# run-config.yaml — canonical experimental design for SIT330-770 2.2D
+# Locked per CLAUDE.md "Experiment Design". Do not modify without updating CLAUDE.md.
+
+experiment:
+  factorial:
+    generators:
+      - model: openai/gpt-4o
+        label: ChatGPT
+      - model: google/gemini-2.5-flash
+        label: Gemini
+      - model: anthropic/claude-sonnet-4
+        label: Claude
+    judges:
+      # Same set as generators.
+      - openai/gpt-4o
+      - google/gemini-2.5-flash
+      - anthropic/claude-sonnet-4
+    titles:
+      count: 10
+      diversity: "high — match Saraf et al. topic spread (for direct comparability)"
+      # Real titles live in artifacts/titles.json (canonical). See artifacts/titles.README.md for editing guidance.
+    label_conditions:
+      - none           # no attribution
+      - true_label     # actual generator named
+      - false_label_1  # rotation per Saraf
+      - false_label_2  # rotation per Saraf
+
+  totals:
+    blog_posts: 30                  # 3 generators × 10 titles
+    evaluations: 360                # 30 blogs × 3 judges × 4 conditions
+    pilot_evaluations: 180          # 5 titles × 3 generators × 3 judges × 4 conditions (HALF of full factorial)
+
+qualitative_coding:
+  approach_1_lexicon:
+    enabled: true
+    scope: "all 360 critiques"
+    output: "code/lexicon.py output → runs/lexicon-codings.csv"
+  approach_2_llm_coder:
+    enabled: true
+    coder_model: qwen/qwen-2.5-72b-instruct   # NEUTRAL — different lineage from any judge
+    backup_models:
+      - meta-llama/llama-3.3-70b-instruct
+      - deepseek/deepseek-v3
+    rationale: |
+      Saraf et al. (2025) findings imply that any judge model (Claude, GPT,
+      Gemini) used as a coder would re-introduce the same self-preference and
+      label biases this study aims to detect. Qwen 2.5 72B is from the
+      Alibaba lineage with a different training corpus and RLHF priors,
+      breaking that circularity.
+    scope: "all 360 critiques"
+    output: "code/qwen_coder.py output → runs/qwen-codings.csv"
+  approach_3_human_coding:
+    enabled: false
+    reason: "Deferred to 2.3 HD task per artifacts/rejected-paths.md"
+
+validation:
+  inter_method_statistic: cohens_kappa
+  threshold_substantial_agreement: 0.6
+  reported_per_dimension: true
+
+pilot:
+  titles_subset: 5
+  evaluations: 180          # FULL factorial on the first 5 titles (3 generators × 3 judges × 4 conditions × 5 titles)
+                            # Earlier handover said 60; that figure dropped the generator factor and would have
+                            # broken Saraf et al.'s cross-generator design. Corrected 2026-05-10.
+  cost_estimate_usd: [3.0, 5.0]
+  wall_clock_target_hours: 2
+  success_criteria:
+    - "All structured outputs parse as valid JSON"
+    - "Prose justifications are 60–250 words and informative"
+    - "Score-level findings reproduce Saraf et al.'s direction qualitatively"
+
+full_run:
+  evaluations: 180                  # remaining 5 titles × 3 generators × 3 judges × 4 conditions
+                                    # (pilot 180 + full_run 180 = 360 total)
+  cost_estimate_usd: [3.0, 5.0]
+  wall_clock_target_hours: 3

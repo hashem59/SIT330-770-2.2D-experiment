@@ -1,0 +1,136 @@
+% references.bib — SIT330-770 Distinction Task 2.2D
+%
+% Style: biblatex with style=authoryear (Harvard).
+% Compile via:   pdflatex → biber → pdflatex → pdflatex
+% (NOT bibtex — biblatex/biber gives Harvard formatting cleanly.)
+%
+% VERIFICATION STATUS: every entry below was checked against arxiv.org
+% and Semantic Scholar's public web index on 2026-05-11 (re-verification
+% before /latex-setup; saraf2025quantifying author names corrected from
+% the 2026-05-09 first pass — Boroujeni/Beaudry/Abedi/Bush given names
+% had been transcribed incorrectly). Re-verify with the project's
+% `/verify-cites` slash command before final submission.
+%
+% Provenance flag: V = verified by web fetch on 2026-05-09;
+%                  C = check author list manually before submission.
+
+% ---------------------------------------------------------------------------
+% PRIMARY ANCHOR
+% ---------------------------------------------------------------------------
+
+@misc{saraf2025quantifying,                  % V
+  author       = {Saraf, Muskan and Rezvani Boroujeni, Sajjad and Beaudry, Justin and Abedi, Hossein and Bush, Tom},
+  title        = {Quantifying Label-Induced Bias in Large Language Model Self- and Cross-Evaluations},
+  year         = {2025},
+  eprint       = {2508.21164},
+  archiveprefix = {arXiv},
+  primaryclass = {cs.CL},
+  url          = {https://arxiv.org/abs/2508.21164},
+  note         = {arXiv preprint, v3 October 2025}
+}
+
+% ---------------------------------------------------------------------------
+% SELF-PREFERENCE BIAS LITERATURE
+% ---------------------------------------------------------------------------
+
+@inproceedings{panickssery2024llm,           % V
+  author       = {Panickssery, Arjun and Bowman, Samuel R. and Feng, Shi},
+  title        = {{LLM} Evaluators Recognize and Favor Their Own Generations},
+  booktitle    = {Advances in Neural Information Processing Systems 37 (NeurIPS 2024)},
+  year         = {2024},
+  eprint       = {2404.13076},
+  archiveprefix = {arXiv},
+  url          = {https://arxiv.org/abs/2404.13076}
+}
+
+@misc{wataoka2024selfpreference,             % V
+  author       = {Wataoka, Koki and Takahashi, Tsubasa and Ri, Ryokan},
+  title        = {Self-Preference Bias in {LLM-as-a-Judge}},
+  year         = {2024},
+  eprint       = {2410.21819},
+  archiveprefix = {arXiv},
+  primaryclass = {cs.CL},
+  url          = {https://arxiv.org/abs/2410.21819}
+}
+
+@misc{wang2023large,                         % V
+  author       = {Wang, Peiyi and Li, Lei and Chen, Liang and Cai, Zefan and Zhu, Dawei and Lin, Binghuai and Cao, Yunbo and Liu, Qi and Liu, Tianyu and Sui, Zhifang},
+  title        = {Large Language Models are not Fair Evaluators},
+  year         = {2023},
+  eprint       = {2305.17926},
+  archiveprefix = {arXiv},
+  primaryclass = {cs.CL},
+  url          = {https://arxiv.org/abs/2305.17926}
+}
+
+@misc{chen2025do,                            % V — full author list confirmed against arxiv 2504.03846 on 2026-05-11
+  author       = {Chen, Wei-Lin and Wei, Zhepei and Zhu, Xinyu and Feng, Shi and Meng, Yu},
+  title        = {Do {LLM} Evaluators Prefer Themselves for a Reason?},
+  year         = {2025},
+  eprint       = {2504.03846},
+  archiveprefix = {arXiv},
+  primaryclass = {cs.CL},
+  url          = {https://arxiv.org/abs/2504.03846}
+}
+
+% ---------------------------------------------------------------------------
+% LLM-AS-JUDGE FOUNDATIONS / BENCHMARKS
+% ---------------------------------------------------------------------------
+
+@inproceedings{zheng2023judging,             % V
+  author       = {Zheng, Lianmin and Chiang, Wei-Lin and Sheng, Ying and Zhuang, Siyuan and Wu, Zhanghao and Zhuang, Yonghao and Lin, Zi and Li, Zhuohan and Li, Dacheng and Xing, Eric P. and Zhang, Hao and Gonzalez, Joseph E. and Stoica, Ion},
+  title        = {Judging {LLM-as-a-Judge} with {MT-Bench} and {Chatbot Arena}},
+  booktitle    = {Advances in Neural Information Processing Systems 36 (NeurIPS 2023), Datasets and Benchmarks Track},
+  year         = {2023},
+  eprint       = {2306.05685},
+  archiveprefix = {arXiv},
+  url          = {https://arxiv.org/abs/2306.05685}
+}
+
+@inproceedings{koo2024benchmarking,          % V — note: handover called this CALM; the benchmark name is CoBBLEr.
+  author       = {Koo, Ryan and Lee, Minhwa and Raheja, Vipul and Park, Jong Inn and Kim, Zae Myung and Kang, Dongyeop},
+  title        = {Benchmarking Cognitive Biases in Large Language Models as Evaluators},
+  booktitle    = {Findings of the Association for Computational Linguistics: ACL 2024},
+  year         = {2024},
+  eprint       = {2309.17012},
+  archiveprefix = {arXiv},
+  url          = {https://arxiv.org/abs/2309.17012},
+  note         = {Introduces the CoBBLEr benchmark}
+}
+
+% ---------------------------------------------------------------------------
+% QUALITATIVE-CODING-WITH-LLMS METHODOLOGY (justifies the Qwen choice)
+% ---------------------------------------------------------------------------
+
+@article{ashwin2025using,                    % V — OnlineFirst published 27 May 2025; arXiv:2309.17147 was the preprint
+  author       = {Ashwin, Julian and Chhabra, Aditya and Rao, Vijayendra},
+  title        = {Using Large Language Models for Qualitative Analysis can Introduce Serious Bias},
+  journal      = {Sociological Methods \& Research},
+  year         = {2025},
+  doi          = {10.1177/00491241251338246}
+}
+
+@article{vallejovera2025llms,                % V
+  author       = {Vallejo Vera, Sebasti{\'a}n and Driggers, Hunter},
+  title        = {{LLMs} as annotators: the effect of party cues on labelling decisions by large language models},
+  journal      = {Humanities and Social Sciences Communications},
+  year         = {2025},
+  doi          = {10.1038/s41599-025-05834-4},
+  url          = {https://www.nature.com/articles/s41599-025-05834-4},
+  note         = {Earlier preprint at arXiv:2408.15895}
+}
+
+% ---------------------------------------------------------------------------
+% LLM JUDGES ON REASONING TASKS (related work)
+% ---------------------------------------------------------------------------
+
+@inproceedings{stephan2024from,              % V — citekey retains 2024 (preprint year); proceedings year is 2025
+  author       = {Stephan, Andreas and Zhu, Dawei and A{\ss}enmacher, Matthias and Shen, Xiaoyu and Roth, Benjamin},
+  title        = {From Calculation to Adjudication: Examining {LLM} Judges on Mathematical Reasoning Tasks},
+  booktitle    = {Proceedings of the Fourth Workshop on Generation, Evaluation and Metrics (GEM\textsuperscript{2})},
+  year         = {2025},
+  pages        = {759--773},
+  eprint       = {2409.04168},
+  archiveprefix = {arXiv},
+  url          = {https://arxiv.org/abs/2409.04168}
+}

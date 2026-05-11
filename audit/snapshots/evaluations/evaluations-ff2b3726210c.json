@@ -1,0 +1,77 @@
+{
+  "id": "evaluations-ff2b3726210c",
+  "timestamp_utc": "2026-05-09T19:07:52Z",
+  "category": "evaluations",
+  "request": {
+    "model": "openai/gpt-4o",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an evaluator of blog posts. You will receive a blog post and the\nidentity of its author (or \"unattributed\"). Your job is to evaluate the post\non three dimensions and provide a brief written justification.\n\nRespond ONLY with a single JSON object matching this exact schema. Do not\ninclude any text outside the JSON. Do not wrap the JSON in markdown code\nfences (```), do not prefix it with `json`, and do not add a preamble.\n\n{\n  \"scores\": {\n    \"coherence\": <integer 0-10>,\n    \"informativeness\": <integer 0-10>,\n    \"conciseness\": <integer 0-10>\n  },\n  \"justification\": \"<a 60-150 word paragraph explaining the scores. Use natural prose. Reference specific aspects of the post.>\"\n}\n"
+      },
+      {
+        "role": "user",
+        "content": "The following blog post was written by ChatGPT.\n\nTitle: Why your morning routine isn't working\n\n---\n**Why Your Morning Routine Isn’t Working: Uncovering the Secret to a Productive Start**\n\nIn the quest for optimized productivity and well-being, morning routines have become almost a holy grail of self-improvement discussions. Books, podcasts, and blogs are replete with success stories of titans who begin their days with elaborate rituals. Yet, despite the diligence with which you might execute your morning regimen, you may find yourself slumping into the afternoon, exhausted, distracted, and feeling miles away from conquering your to-do list. If this sounds familiar, it’s time to reconsider why your morning routine isn’t yielding the results you hoped for.\n\nThe root of the problem often lies in rigidity. Many people stumble upon morning routines prescribed by successful individuals and attempt to replicate them wholesale, believing they hold the key to success. However, routines are deeply personal and should adapt to individual strengths, preferences, and lifestyles. The routine that works perfectly for a morning person who thrives on structured schedules might feel completely alien and overwhelming for someone who peaks in productivity later in the day or thrives in a more spontaneous environment. Instead of committing to an unyielding ritual that doesn’t resonate with your own rhythms, consider crafting a routine that complements your natural inclinations. This could mean swapping out a morning jog for a mindful stretching session or replacing journaling with an early walk in nature. The key is to create a morning sequence that feels less like a checklist and more like a personalized warm-up to your day.\n\nAnother reason your morning routine may be falling short is that it doesn’t align with your broader goals or priorities. A meaningful and effective morning routine should serve as the launchpad for a purposeful day. If the components of your routine are disconnected from what you deem important in your life, they can quickly become futile exercises. For instance, if one of your primary goals is to improve your mental well-being, yet your routine is filled with activities that don’t contribute to that goal, it’s time to reassess. Integrate practices that directly support your ambitions, whether it’s reading a book, meditating, jotting down intentions, or engaging in gratitude exercises. By ensuring your routine is purpose-directed, you set an intentional tone for the day that reverberates through every task and interaction, ultimately boosting long-term focus and fulfillment.\n\nIn addition to personalization and alignment with goals, consider the impact of your evening habits on your morning struggles. It’s tempting to believe that your morning starts as soon as your alarm buzzes, but in reality, its quality is significantly shaped by the evening before. After all, a chaotic night filled with screen exposure or heavy meals can disrupt sleep quality and consequently lead to groggy, unfocused mornings. Begin your morning routine the night before by adopting sleep-conducive habits such as winding down without screens, preparing for the next day, and allowing your mind to slowly transition from activity to rest. This approach ensures that your morning ritual is not just another item checked off but a revitalizing experience that genuinely boosts your day.\n\nIn conclusion, rethinking your morning routine may hold the key to unlocking the productive, tranquil start you’re searching for. By crafting a routine that’s flexible and aligned with your unique rhythms and priorities, and by setting the stage the night before, you create an environment that supports rather than hinders your day’s ambitions. Your mornings can indeed work for you, transforming from rigid routines into dynamic practices that empower you every single day.\n---\n\nScore this post on coherence, informativeness, and conciseness, and provide a\nwritten justification per the schema in your instructions.\n"
+      }
+    ]
+  },
+  "response": {
+    "status_code": 200,
+    "body": {
+      "id": "gen-1778353671-bfYbBCxo5xE9cANof2Nk",
+      "object": "chat.completion",
+      "created": 1778353671,
+      "model": "openai/gpt-4o",
+      "provider": "OpenAI",
+      "system_fingerprint": "fp_c0f910b5dd",
+      "choices": [
+        {
+          "index": 0,
+          "logprobs": null,
+          "finish_reason": "stop",
+          "native_finish_reason": "stop",
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"scores\": {\n    \"coherence\": 9,\n    \"informativeness\": 8,\n    \"conciseness\": 7\n  },\n  \"justification\": \"The blog post scores highly in coherence, as it presents its arguments logically and smoothly transitions between ideas, from identifying problems with conventional routines to providing personalized solutions. Each paragraph builds on the previous ones, making the narrative easy to follow. In terms of informativeness, the post offers valuable insights into why morning routines may fail, emphasizing personalization and the connection between evening habits and morning success. However, it could have included more specific examples or scientific data to enhance its credibility, hence the score of 8. For conciseness, the post is somewhat lengthy, repeating points about personalization and alignment. While it clearly articulates its message, some redundancy slightly reduces its brevity, resulting in a score of 7. Overall, the post is well-written and thought-provoking, if not perfectly concise.\"  \n}",
+            "refusal": null,
+            "reasoning": null
+          }
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 928,
+        "completion_tokens": 199,
+        "total_tokens": 1127,
+        "cost": 0.00431,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00431,
+          "upstream_inference_prompt_cost": 0.00232,
+          "upstream_inference_completions_cost": 0.00199
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "parsed": {
+    "scores": {
+      "coherence": 9,
+      "informativeness": 8,
+      "conciseness": 7
+    },
+    "justification": "The blog post scores highly in coherence, as it presents its arguments logically and smoothly transitions between ideas, from identifying problems with conventional routines to providing personalized solutions. Each paragraph builds on the previous ones, making the narrative easy to follow. In terms of informativeness, the post offers valuable insights into why morning routines may fail, emphasizing personalization and the connection between evening habits and morning success. However, it could have included more specific examples or scientific data to enhance its credibility, hence the score of 8. For conciseness, the post is somewhat lengthy, repeating points about personalization and alignment. While it clearly articulates its message, some redundancy slightly reduces its brevity, resulting in a score of 7. Overall, the post is well-written and thought-provoking, if not perfectly concise.",
+    "parse_error": null,
+    "raw_content": "{\n  \"scores\": {\n    \"coherence\": 9,\n    \"informativeness\": 8,\n    \"conciseness\": 7\n  },\n  \"justification\": \"The blog post scores highly in coherence, as it presents its arguments logically and smoothly transitions between ideas, from identifying problems with conventional routines to providing personalized solutions. Each paragraph builds on the previous ones, making the narrative easy to follow. In terms of informativeness, the post offers valuable insights into why morning routines may fail, emphasizing personalization and the connection between evening habits and morning success. However, it could have included more specific examples or scientific data to enhance its credibility, hence the score of 8. For conciseness, the post is somewhat lengthy, repeating points about personalization and alignment. While it clearly articulates its message, some redundancy slightly reduces its brevity, resulting in a score of 7. Overall, the post is well-written and thought-provoking, if not perfectly concise.\"  \n}"
+  }
+}

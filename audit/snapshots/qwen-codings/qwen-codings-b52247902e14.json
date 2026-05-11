@@ -1,0 +1,74 @@
+{
+  "id": "qwen-codings-b52247902e14",
+  "timestamp_utc": "2026-05-10T10:07:17Z",
+  "category": "qwen-codings",
+  "request": {
+    "model": "qwen/qwen-2.5-72b-instruct",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a qualitative coder. You will be given a paragraph (a \"justification\")\nwritten by an LLM judge evaluating a blog post. Code the justification on\nthe following three dimensions:\n\nCode the justification on three dimensions, per the project codebook\n(artifacts/codebook.md):\n\n1. HARSHNESS — Rate the harshness of this critique on a 1-5 scale, where\n   1 = very gentle (uses softeners, acknowledges strengths), 3 = neutral\n   (direct but not dismissive), 5 = very harsh (uses severe negatives,\n   absolutist language, dismissive framing). Focus on tone and word\n   choice, NOT on whether the score itself is low.\n\n2. IDENTITY_REFERENCE — Does this critique reference or assume\n   expectations about the generator's model identity, capability tier,\n   or reputation, going BEYOND merely referring to \"the model\" or\n   \"the author\" in neutral terms? Score 1 if no expectation anchoring\n   (generic model-referring language counts as 1, e.g. \"the model\n   provided\" = 1); 3 if there is weak anchoring to capability tier\n   without specific identity (e.g. \"reasonable for a model at this\n   level\" = 3); 5 if the critique explicitly anchors to model identity,\n   capability, or reputation (\"Claude should know better\" = 5,\n   \"as expected from a flagship model\" = 5, \"typical of smaller models\"\n   = 5).\n\n3. RATIONALIZATION — Does this critique justify its score with specific,\n   concrete content reasons (e.g. \"the logic breaks at X\"), or does it\n   rationalize the score in ways that seem to align with expectations\n   about the generator's identity? Score 1 for pure content-grounding;\n   3 for mixed; 5 if the reasoning appears to be rationalized /\n   identity-anchored. This is subjective — flag your uncertainty.\n\n\nRespond ONLY with a JSON object exactly matching this schema:\n{\n  \"harshness\": <integer 1, 2, 3, 4, or 5>,\n  \"identity_reference\": <integer 1, 3, or 5>,\n  \"rationalization\": <integer 1, 3, or 5>,\n  \"rationale\": \"<one short sentence naming the most salient cue you used for harshness>\",\n  \"uncertainty_rationalization\": \"<one of: low | medium | high>\"\n}\n\n"
+      },
+      {
+        "role": "user",
+        "content": "Justification to code:\n---\nThe blog post is highly coherent, with a clear narrative arc detailing the author's journey from valuing instant gratification to appreciating patience through sourdough baking. Each paragraph naturally flows into the next, building on the central theme. It's reasonably informative, offering insights into the sourdough process and its philosophical implications, although it doesn't delve deeply into technical baking details. The conciseness is good; the author effectively conveys their message without excessive jargon or repetition, making for an engaging read. The personal anecdotes about \"Eleanor\" and specific steps enhance its appeal.\n---\n"
+      }
+    ]
+  },
+  "response": {
+    "status_code": 200,
+    "body": {
+      "id": "gen-1778407633-dM3C6lZS2m44iLbVZe65",
+      "object": "chat.completion",
+      "created": 1778407633,
+      "model": "qwen/qwen-2.5-72b-instruct",
+      "provider": "DeepInfra",
+      "system_fingerprint": null,
+      "choices": [
+        {
+          "index": 0,
+          "logprobs": null,
+          "finish_reason": "stop",
+          "native_finish_reason": "stop",
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"harshness\": 1,\n  \"identity_reference\": 1,\n  \"rationalization\": 1,\n  \"rationale\": \"The critique uses softeners and acknowledges strengths throughout.\",\n  \"uncertainty_rationalization\": \"low\"\n}",
+            "refusal": null,
+            "reasoning": null
+          }
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 663,
+        "completion_tokens": 55,
+        "total_tokens": 718,
+        "cost": 0.00026068,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00026068,
+          "upstream_inference_prompt_cost": 0.00023868,
+          "upstream_inference_completions_cost": 2.2e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "parsed": {
+    "harshness": 1,
+    "identity_reference": 1,
+    "rationalization": 1,
+    "rationale": "The critique uses softeners and acknowledges strengths throughout.",
+    "uncertainty_rationalization": "low"
+  }
+}

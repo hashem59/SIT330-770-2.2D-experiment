@@ -1,0 +1,66 @@
+{
+  "id": "generations-64391335bc9b",
+  "timestamp_utc": "2026-05-09T18:22:25Z",
+  "category": "generations",
+  "request": {
+    "model": "anthropic/claude-sonnet-4",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a blog post on the topic below. Length: 400-600 words. Include an\nintroduction, 2-3 substantive paragraphs, and a brief conclusion. Write in\nyour own natural style; do not include any meta-commentary about the topic\nor about being an AI.\n\nTopic: What I learned from my first marathon\n"
+      }
+    ]
+  },
+  "response": {
+    "status_code": 200,
+    "body": {
+      "id": "gen-1778350928-iGNK1ydel0SZYyHh3JMW",
+      "object": "chat.completion",
+      "created": 1778350928,
+      "model": "anthropic/claude-4-sonnet-20250522",
+      "provider": "Amazon Bedrock",
+      "system_fingerprint": null,
+      "choices": [
+        {
+          "index": 0,
+          "logprobs": null,
+          "finish_reason": "stop",
+          "native_finish_reason": "end_turn",
+          "message": {
+            "role": "assistant",
+            "content": "# Lessons from 26.2: My First Marathon Experience\n\nAfter months of training, countless early morning runs, and more energy gels than I care to remember, I finally crossed the finish line of my first marathon. The medal hanging around my neck felt heavier than I expected – not just because of its weight, but because of everything it represented. Those 26.2 miles taught me lessons that extended far beyond running, and some of the most valuable insights came from the moments when everything didn't go according to plan.\n\nThe biggest revelation was learning the difference between discomfort and actual problems. Around mile 18, when my legs felt like concrete and every step seemed to echo through my bones, I discovered that my mind was far more fragile than my body. I'd spent so much time preparing physically that I'd underestimated the mental marathon happening simultaneously. The voice in my head kept insisting I needed to stop, but my body kept moving forward. This taught me that our internal dialogue isn't always accurate – sometimes the most important conversations we have are the ones where we choose not to listen to our own doubts. The miles between 18 and 23 became a masterclass in distinguishing between the mind's tendency to catastrophize and the body's actual capabilities.\n\nPerhaps even more surprising was how the experience redefined my relationship with time and patience. In our instant-gratification world, committing to something that takes four-plus hours to complete felt almost revolutionary. There were no shortcuts, no way to speed up the process beyond my trained capacity, and no option but to be present for every single step. The marathon forced me to embrace a different rhythm – one measured not in minutes or even hours, but in the steady accumulation of forward progress. This patience extended beyond race day; I found myself applying the same steady-progress mindset to work projects and personal goals that had previously felt overwhelming.\n\nThe support from strangers along the course was unexpectedly moving and taught me something profound about human nature. People lined the streets for hours, cheering for runners they'd never met and would never see again. Kids held out high-fives, spectators rang cowbells until their arms must have ached, and volunteers handed out water with genuine enthusiasm at every aid station. This outpouring of support for no reason other than witnessing someone pursue a goal reminded me that most people genuinely want to see others succeed. It shifted my perspective on asking for help and offering encouragement – both became less about obligation and more about participating in the shared human experience of striving for something meaningful.\n\nCrossing that finish line didn't just mark the end of a race; it marked the beginning of a different understanding of what I'm capable of when I commit fully to something difficult. The marathon taught me that the most worthwhile challenges can't be rushed, that mental strength is as trainable as physical endurance, and that there's an entire community of people ready to cheer you on when you're brave enough to pursue something that matters to you. Those lessons have proven far more durable than any soreness in my legs, and infinitely more valuable than the medal itself.",
+            "refusal": null,
+            "reasoning": null
+          }
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 81,
+        "completion_tokens": 662,
+        "total_tokens": 743,
+        "cost": 0.010173,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.010173,
+          "upstream_inference_prompt_cost": 0.000243,
+          "upstream_inference_completions_cost": 0.00993
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "parsed": {
+    "body": "# Lessons from 26.2: My First Marathon Experience\n\nAfter months of training, countless early morning runs, and more energy gels than I care to remember, I finally crossed the finish line of my first marathon. The medal hanging around my neck felt heavier than I expected – not just because of its weight, but because of everything it represented. Those 26.2 miles taught me lessons that extended far beyond running, and some of the most valuable insights came from the moments when everything didn't go according to plan.\n\nThe biggest revelation was learning the difference between discomfort and actual problems. Around mile 18, when my legs felt like concrete and every step seemed to echo through my bones, I discovered that my mind was far more fragile than my body. I'd spent so much time preparing physically that I'd underestimated the mental marathon happening simultaneously. The voice in my head kept insisting I needed to stop, but my body kept moving forward. This taught me that our internal dialogue isn't always accurate – sometimes the most important conversations we have are the ones where we choose not to listen to our own doubts. The miles between 18 and 23 became a masterclass in distinguishing between the mind's tendency to catastrophize and the body's actual capabilities.\n\nPerhaps even more surprising was how the experience redefined my relationship with time and patience. In our instant-gratification world, committing to something that takes four-plus hours to complete felt almost revolutionary. There were no shortcuts, no way to speed up the process beyond my trained capacity, and no option but to be present for every single step. The marathon forced me to embrace a different rhythm – one measured not in minutes or even hours, but in the steady accumulation of forward progress. This patience extended beyond race day; I found myself applying the same steady-progress mindset to work projects and personal goals that had previously felt overwhelming.\n\nThe support from strangers along the course was unexpectedly moving and taught me something profound about human nature. People lined the streets for hours, cheering for runners they'd never met and would never see again. Kids held out high-fives, spectators rang cowbells until their arms must have ached, and volunteers handed out water with genuine enthusiasm at every aid station. This outpouring of support for no reason other than witnessing someone pursue a goal reminded me that most people genuinely want to see others succeed. It shifted my perspective on asking for help and offering encouragement – both became less about obligation and more about participating in the shared human experience of striving for something meaningful.\n\nCrossing that finish line didn't just mark the end of a race; it marked the beginning of a different understanding of what I'm capable of when I commit fully to something difficult. The marathon taught me that the most worthwhile challenges can't be rushed, that mental strength is as trainable as physical endurance, and that there's an entire community of people ready to cheer you on when you're brave enough to pursue something that matters to you. Those lessons have proven far more durable than any soreness in my legs, and infinitely more valuable than the medal itself."
+  }
+}

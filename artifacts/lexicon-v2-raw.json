@@ -1,0 +1,77 @@
+{
+  "_response_id": "lexicon-construction-668f1ad08253",
+  "_constructed_at": "2026-05-10T12:36:33Z",
+  "_corpus_size": 96,
+  "_per_stratum": 8,
+  "_seed": 42,
+  "_pilot_titles": [
+    "How sourdough baking changed my relationship with time",
+    "The ethics of self-driving cars",
+    "The unexpected joy of reading paper books",
+    "What I learned from my first marathon",
+    "Why your morning routine isn't working"
+  ],
+  "level_2_mild": [
+    "could be improved",
+
+    "somewhat verbose",
+    " lean toward wordiness",
+    "slightly repetitive",
+    "could be slightly more concise",
+    "could be trimmed",
+    "some redundancy",
+    "could be more succinct",
+    "repetition of ideas",
+    "somewhat predictable",
+    "could delve deeper",
+    "could be more concise",
+    "could be tightened"
+  ],
+  "level_3_moderate": [
+    "extraneous",
+    "redundant",
+    "weaker aspect",
+    "weak",
+    "inadequate",
+    "lacks specific",
+    "not particularly informative",
+
+    "limited new information",
+    "lacks detailed",
+    "could be more efficient",
+    "not groundbreaking",
+    "reiterates common sentiments",
+    "lacks depth",
+    "less informative",
+    "unsubstantive"
+  ],
+  "level_5_severe": [
+    "completely lacking",
+    "fundamentally flawed",
+    "worthless",
+    "lacks substantial",
+    "fails to provide",
+    "overly elaborate",
+    "unnecessarily verbose",
+    "unnecessarily ornate",
+    "excessively repetitive",
+    "fails to deliver",
+    "fails to",
+    "overwrought",
+    "overly elaborate language"
+  ],
+  "notes": "Judges frequently critique verbosity and repetition, emphasizing the need for more concise and direct prose. They also often point out the lack of novel or specific information, suggesting a preference for well-substantiated and concrete insights.",
+  "_curation_notes": {
+    "curated_by": "Hashem",
+    "curated_at": "2026-05-10T...",
+    "decisions": [
+      "Consolidated 'lacks depth' to level 3 only; mild form was inconsistent with codebook v0.2 'observable severity' criterion",
+      "Struck 'fails to' from level 3 due to substring overlap with level 5 phrases ('fails to provide', 'fails to deliver')",
+      "Struck 'generally well-structured, but' as polarity-fragile per codebook §X (depends on subsequent clause)",
+      "Struck 'not particularly informative' as polarity-fragile (specific negation form, won't generalize)",
+      "Demoted 'redundant', 'extraneous', 'unsubstantive' from level 5 to level 3 — these are direct but not absolutist/contempt-laden per codebook v0.2 level-5 definition",
+      "Demoted 'could be more concise' from level 3 to level 2 — common hedged form, mild in register",
+      "Stripped leading whitespace from 'lean toward wordiness'"
+    ]
+  }
+}
